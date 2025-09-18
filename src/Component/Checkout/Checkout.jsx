@@ -104,23 +104,24 @@ const Checkout = () => {
             </div>
 
             {/* Buttons */}
-            <div className="d-grid gap-2 mt-4">
+           <div className="d-flex gap-2 mt-4 flex-wrap">
   {/* 🛒 Proceed to Pay */}
- <button
-  className="btn btn-success btn-lg fw-bold w-50"
-  onClick={() => navigate("/CartPage", { state: { product } })} // 👈 pass product to Cart
->
-  <i className="bi bi-cart-check-fill me-2"></i> Proceed to Pay
-</button>
+  <button
+    className="btn btn-success fw-bold w-50 text-truncate"
+    style={{ fontSize: "clamp(12px, 2vw, 18px)" }}
+    onClick={() => navigate("/CartPage", { state: { product } })}
+  >
+    <i className="bi bi-cart-check-fill me-2"></i> Proceed to Pay
+  </button>
 
   {/* ⬅ Continue Shopping */}
   <button
-    className="btn btn-outline-secondary fw-bold w-50"
+    className="btn btn-outline-secondary fw-bold w-50 text-truncate"
+    style={{ fontSize: "clamp(12px, 2vw, 18px)" }}
     onClick={() => navigate("/")}
   >
     <i className="bi bi-arrow-left me-2"></i> Continue Shopping
   </button>
-  
 </div>
 
 

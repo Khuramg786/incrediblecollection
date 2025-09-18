@@ -7,7 +7,6 @@ import Filter from '../Filter/Filter.jsx';
 import Checkout from '../Checkout/Checkout.jsx';
 import "./Home.css"; 
 const Home = () => {
-
   const shopbycategory = [
     {
       img: "https://photos3.walmart.com/prism/themes/wmceramicmugs-21.themepack/wmt_weloveyoudad_7x3_11oz_bluehandle.mug/_hd_product_01.jpg", 
@@ -279,30 +278,7 @@ const chunkArray = (arr, size) =>
     return chunks;
   }, []);
     
-     const getProductList = async () => {
-    try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-      const result = await response.json();
-      setProducts(result);
-      console.log("set of instugoint ",)
-    } catch (error) {
-      console.error('Error fetching products:', error);
-    }
-  };
-   useEffect(() => {
-    getProductList();
-  }, []);
-const [users, setUsers] = useState([]);
 
-  const getData = async () => {
-    try {
-      const res = await fetch("http://localhost:5000/data"); // backend API
-      const data = await res.json();
-      setUsers(data);
-    } catch (err) {
-      console.error("Error fetching data:", err);
-    }
-  };
   return (
     <div>
 
@@ -310,60 +286,60 @@ const [users, setUsers] = useState([]);
       <Banner />
       {/* ----------------------Shop By Category------------------ */}
       <div className="mx-4 my-5">
-    <div className="d-flex align-items-center">
-  <div>
-    <h3 className="fw-bold mb-1">Shop By Category</h3>
-    <p style={{ fontSize: "12px", margin: 0 }}>
-      (printing, Costmatick, diecast car)
-    </p>
-  </div>
-  <hr className="border-primary border-2 w-50 me-2" />
-</div>
-
-
-        
-       <div className="row text-center mt-4 d-flex flex-wrap justify-content-center">
-  {shopbycategory.map((item, index) => (
-    <div
-      key={index}
-      className="mb-4"
-      style={{
-        flex: "0 0 calc(100% / 10)", // exactly 7 items per row
-        maxWidth: "calc(100% / 7)",
-      }}
-    >
-       <Link to="/Filter" >
-      <div
-        className="rounded-circle border p-3 d-flex justify-content-center align-items-center mx-auto"
-        style={{ width: "120px", height: "120px" }}
-      >
-        <img src={item.img} className="img-fluid zoom-img" alt={item.title} />
-      </div>
-</Link>
-      <h6 className="fw-bold mt-2 mb-1">{item.title}</h6>
-      <small className="text-muted d-block">{item.countity}</small>
+  <div className="d-flex align-items-center">
+    <div>
+      <h3 className="fw-bold mb-1">Shop By Category</h3>
+      <p style={{ fontSize: "12px", margin: 0 }}>
+        (printing, Costmatick, diecast car)
+      </p>
     </div>
-  ))}
-</div>
+    <hr className="border-primary border-2 w-50 me-2" />
+  </div>
+
+  <div className="row text-center mt-4">
+    {shopbycategory.map((item, index) => (
+      <div
+        key={index}
+        className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 d-flex flex-column align-items-center"
+      >
+        <Link to="/Filter">
+          <div
+            className="rounded-circle border p-3 d-flex justify-content-center align-items-center mx-auto"
+            style={{ width: "120px", height: "120px" }}
+          >
+            <img
+              src={item.img}
+              className="img-fluid zoom-img"
+              alt={item.title}
+              style={{ maxHeight: "100px", objectFit: "contain" }}
+            />
+          </div>
+        </Link>
+        <h6 className="fw-bold mt-2 mb-1">{item.title}</h6>
+        <small className="text-muted d-block">{item.countity}</small>
       </div>
+    ))}
+  </div>
+</div>
+
         {/* ----------------------3 carde create ------------------ */}
-      <div className="mx-4 my-5">
+     <div className="mx-4 my-5">
   <div className="row g-3">
     {product.map((item, index) => (
-      <div className="col-md-4" key={index}>
+      <div className="col-12 col-sm-6 col-md-4" key={index}>
         <div
-          className="d-flex align-items-center rounded-3 p-4 text-white"
-          style={{ backgroundColor: item.bg, height: "220px" }} // ✅ fixed height
+          className="d-flex align-items-center rounded-3 p-4 text-white h-100"
+          style={{ backgroundColor: item.bg, minHeight: "220px" }}
         >
           {/* Left image */}
-          <div style={{ flex: "0 0 120px" }}> {/* ✅ smaller fixed width */}
+          <div style={{ flex: "0 0 100px" }}>
             <img
               src={item.img}
               alt={item.title}
               className="img-fluid zoom-img"
               style={{
-                maxHeight: "150px", // ✅ prevent oversized images
-                objectFit: "contain", // ✅ keep proportions
+                maxHeight: "140px",
+                objectFit: "contain",
               }}
             />
           </div>
@@ -392,6 +368,7 @@ const [users, setUsers] = useState([]);
     ))}
   </div>
 </div>
+
 
   {/* ----------------------Custom Printing Products------------------ */}
         <div className="mx-4 my-4">
@@ -544,69 +521,70 @@ const [users, setUsers] = useState([]);
     </div>
   ))}
 </div>
-
-
-
     </div>
 {/* -------------------------- 2 main card bannar ------------------------- */}
 <div className="mx-4 my-5">
   <div className="row g-3">
     {/* Promo Card 1 */}
-   <div className="col-md-6">
-  <div
-    className="d-flex align-items-center rounded p-4 h-100"
-    style={{ backgroundColor: "#9160cc" }}
-  >
-    {/* Image */}
-    <img
-      src="https://m.media-amazon.com/images/I/51Xu56nJr4L._UF1000,1000_QL80_.jpg"
-      alt="Controller"
-      className="img-fluid rounded me-3 "
-      style={{
-        maxWidth: "45%",
-        transition: "transform 0.3s ease", // smooth animation
-      }}
-      onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-      onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
-    />
-    {/* Text Content */}
-    <div className="text-white">
-      <h5 className="fw-bold fs-3">Start Makers Makeup Brush Set Glamour</h5>
-      <p className="mb-1">
-        From <span className="fw-bold fs-5">$00.00</span>
-      </p>
-      <a href="#" className="btn fs-5 fw-bold text-decoration-none">
-        <i className="bi bi-arrow-right-circle-fill me-1"></i> SHOP NOW
-      </a>
+    <div className="col-12 col-md-6">
+      <div
+        className="d-flex flex-column flex-sm-row align-items-center rounded p-4 h-100"
+        style={{ backgroundColor: "#9160cc" }}
+      >
+        {/* Image */}
+        <img
+          src="https://m.media-amazon.com/images/I/51Xu56nJr4L._UF1000,1000_QL80_.jpg"
+          alt="Controller"
+          className="img-fluid rounded mb-3 mb-sm-0 me-sm-3"
+          style={{
+            maxWidth: "45%",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+          onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+        />
+        {/* Text Content */}
+        <div className="text-white text-center text-sm-start">
+          <h5 className="fw-bold fs-4 fs-md-3">
+            Start Makers Makeup Brush Set Glamour
+          </h5>
+          <p className="mb-1">
+            From <span className="fw-bold fs-5">$00.00</span>
+          </p>
+          <a href="#" className="btn fs-5 fw-bold text-decoration-none text-white">
+            <i className="bi bi-arrow-right-circle-fill me-1"></i> SHOP NOW
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
     {/* Promo Card 2 */}
-    <div className="col-md-6">
+    <div className="col-12 col-md-6">
       <div
-        className="d-flex align-items-center rounded p-4 h-100"
+        className="d-flex flex-column flex-sm-row align-items-center rounded p-4 h-100"
         style={{ backgroundColor: "#f34c2b" }}
       >
         {/* Image */}
         <img
           src="https://colortrack.ae/wp-content/uploads/2020/02/gift.png"
-          alt="iPad Pro"
-          className="img-fluid rounded me-3"
+          alt="Gift Items"
+          className="img-fluid rounded mb-3 mb-sm-0 me-sm-3"
           style={{
-        maxWidth: "45%",
-        transition: "transform 0.3s ease", // smooth animation
-      }}
-      onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-      onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            maxWidth: "45%",
+            transition: "transform 0.3s ease",
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+          onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
         />
         {/* Text Content */}
-        <div className="text-white">
-          <h5 className="fw-bold fs-3">GIFT & PROMOTIONAL ITEMS PRINTING </h5>
+        <div className="text-white text-center text-sm-start">
+          <h5 className="fw-bold fs-4 fs-md-3">
+            GIFT & PROMOTIONAL ITEMS PRINTING
+          </h5>
           <p className="mb-1">
             From <span className="fw-bold fs-5">$00.00</span>
           </p>
-           <a href="#" className="btn fs-5  fw-bold text-decoration-none">
+          <a href="#" className="btn fs-5 fw-bold text-decoration-none text-white">
             <i className="bi bi-arrow-right-circle-fill me-1"></i> SHOP NOW
           </a>
         </div>

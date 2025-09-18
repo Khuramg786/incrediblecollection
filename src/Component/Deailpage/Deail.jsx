@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./Deal.css"; 
+import "./Deal.css";
 
 const Deail = () => {
-  // Product data
   const products = [
     {
       id: 1,
@@ -20,7 +19,7 @@ const Deail = () => {
       id: 2,
       title: "Promotional Gifts,Promotional ",
       oldPrice: 878,
-      newPrice: 772.64,
+      newPrice: 0.0,
       discount: "-12%",
       rating: 3,
       stock: 122,
@@ -32,7 +31,7 @@ const Deail = () => {
       id: 3,
       title: "Full Makeup Kit with Applicator",
       oldPrice: 200,
-      newPrice: 194,
+      newPrice: 0.0,
       discount: "-$6.00",
       rating: 5,
       stock: 124,
@@ -42,7 +41,6 @@ const Deail = () => {
     },
   ];
 
-  // Countdown State
   const [timeLeft, setTimeLeft] = useState({
     days: 705,
     hours: 10,
@@ -50,31 +48,24 @@ const Deail = () => {
     seconds: 0,
   });
 
-  // Timer logic
+  // Timer
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         let { days, hours, minutes, seconds } = prev;
-
-        if (seconds > 0) {
-          seconds--;
-        } else {
+        if (seconds > 0) seconds--;
+        else {
           seconds = 59;
-          if (minutes > 0) {
-            minutes--;
-          } else {
+          if (minutes > 0) minutes--;
+          else {
             minutes = 59;
-            if (hours > 0) {
-              hours--;
-            } else {
+            if (hours > 0) hours--;
+            else {
               hours = 23;
-              if (days > 0) {
-                days--;
-              }
+              if (days > 0) days--;
             }
           }
         }
-
         return { days, hours, minutes, seconds };
       });
     }, 1000);
@@ -82,11 +73,21 @@ const Deail = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // WhatsApp handler
+  const handleWhatsApp = (product) => {
+    const phoneNumber = "+923019854185";
+    const message = `Hello, I want to order: ${product.title} - Price: $${product.newPrice}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="mx-4 my-5">
-      <div className="d-flex justify-content-between align-items-center mb-4">
+      <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap">
         <h3>Deal Of The Day</h3>
-         <hr className="border-primary border-2 w-50" />
+        <hr className="border-primary border-2 flex-grow-1 mx-2" />
         <a href="#" className="fw-bold text-decoration-none">
           ALL SALE PRODUCTS
         </a>
@@ -94,11 +95,11 @@ const Deail = () => {
 
       <div className="row g-4">
         {products.map((product) => (
-          <div key={product.id} className="col-md-4">
-            <div className="deal-card shadow-lg">
-              <div className="row g-0 align-items-center">
-                {/* Image on Left */}
-                <div className="col-5 text-center p-3">
+          <div key={product.id} className="col-12 col-sm-6 col-md-4">
+            <div className="deal-card shadow-lg h-100">
+              <div className="d-flex flex-column flex-sm-row align-items-center h-100">
+                {/* Image */}
+                <div className="p-3 text-center">
                   <img
                     src={product.image}
                     alt={product.title}
@@ -110,10 +111,13 @@ const Deail = () => {
                   </span>
                 </div>
 
-                {/* Content on Right */}
-                <div className="col-7 p-3">
+                {/* Content */}
+                <div className="p-3 text-center text-sm-start">
                   <h6 className="card-title">{product.title}</h6>
-                  <div className="mb-2 fs-4 fw-bold" style={{color:"#ffc107"}}>
+                  <div
+                    className="mb-2 fs-4 fw-bold"
+                    style={{ color: "#ffc107" }}
+                  >
                     {"★".repeat(product.rating)}
                     {"☆".repeat(5 - product.rating)}
                   </div>
@@ -139,14 +143,18 @@ const Deail = () => {
                   </div>
 
                   {/* Countdown */}
-                  <div className="d-flex gap-1 mb-2">
+                  <div className="d-flex justify-content-center justify-content-sm-start gap-1 mb-2">
                     <div className="time-box">{timeLeft.days}d</div>
                     <div className="time-box">{timeLeft.hours}h</div>
                     <div className="time-box">{timeLeft.minutes}m</div>
                     <div className="time-box">{timeLeft.seconds}s</div>
                   </div>
 
-                  <button className="btn btn-dark w-100 fw-bold">
+                  {/* WhatsApp Button */}
+                  <button
+                    className="btn btn-dark w-100 fw-bold"
+                    onClick={() => handleWhatsApp(product)}
+                  >
                     {product.button}
                   </button>
                 </div>

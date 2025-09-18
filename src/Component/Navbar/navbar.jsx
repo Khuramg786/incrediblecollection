@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./navbar.css";
+// import "./navbar.css";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -34,43 +34,48 @@ export default function Navbar() {
       </div>
 
       {/* Contact + Settings */}
-      <div
+        <div
         style={{
           background: "linear-gradient(to left, #c9930f, rgba(201,147,15,0))",
         }}
-        className="text-white px-3 d-flex justify-content-between align-items-center py-1"
+        className="text-white px-3 d-flex flex-column flex-md-row justify-content-between align-items-center py-2"
       >
-        <Link to="/">
+        {/* Left: Logo */}
+        <Link to="/" className="mb-2 mb-md-0">
           <img
             src="https://ik.imagekit.io/b6iqka2sz/logo.........png?updatedAt=1757704294568"
             alt="Incredible Collection Logo"
             style={{
-              maxHeight: "100px",
+              maxHeight: "100px", // smaller on phones
               width: "auto",
-              marginLeft: "40px",
+              marginLeft: "0",
               cursor: "pointer",
             }}
+            className="mx-auto mx-md-0 d-block"
           />
         </Link>
 
-        <div className="text-dark fw-bold">
-          <i className="bi bi-envelope "></i> incrediblecollection0@gmail.com
-          &nbsp; | &nbsp;
-          <i className="bi bi-telephone"></i> &nbsp;(+92) 3019854185
+        {/* Center: Contact Info */}
+        <div className="text-dark fw-bold text-center text-md-start mb-2 mb-md-0">
+          <i className="bi bi-envelope"></i> incrediblecollection0@gmail.com
+          <br className="d-md-none" /> {/* Break line only on phones */}
+          <span className="d-none d-md-inline">&nbsp; | &nbsp;</span>
+          <i className="bi bi-telephone"></i> (+92) 3019854185
         </div>
 
         {/* Right: Icons + Account */}
-        <div className="d-flex align-items-center">
-          <div className="d-flex ms-3 align-items-center">
+        <div className="d-flex align-items-center justify-content-center gap-2 gap-md-3">
+          {/* Icons */}
+          <div className="d-flex align-items-center">
             {/* Wishlist */}
-            <i className="bi bi-heart me-3 position-relative px-2">
+            <i className="bi bi-heart me-2 me-md-3 position-relative px-2">
               <span className="badge bg-primary position-absolute top-0 start-100 translate-middle rounded-pill">
                 0
               </span>
             </i>
 
             {/* Refresh */}
-            <i className="bi bi-arrow-repeat me-3 position-relative px-2">
+            <i className="bi bi-arrow-repeat me-2 me-md-3 position-relative px-2">
               <span className="badge bg-primary position-absolute top-0 start-100 translate-middle rounded-pill">
                 0
               </span>
@@ -85,12 +90,14 @@ export default function Navbar() {
           </div>
 
           {/* Account */}
-          <a href="#" className="text-white text-decoration-none px-3">
+          <a
+            href="#"
+            className="text-white text-decoration-none px-2 px-md-3 small small-md-normal"
+          >
             <i className="bi bi-person"></i> Account Log in
           </a>
         </div>
       </div>
-
       {/* Main Navbar */}
       <nav
         className="navbar navbar-expand-lg navbar-dark "
