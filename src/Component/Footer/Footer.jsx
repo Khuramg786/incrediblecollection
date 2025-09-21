@@ -94,7 +94,7 @@ const Footer =()=>{
     />
   </a>
 
-  <a href="https://tiktok.com/@YourProfile" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.tiktok.com/@incredible.collec09?_t=ZN-8zuQ4WZKFkc&_r=1" target="_blank" rel="noopener noreferrer">
     <img
       src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png"
       alt="TikTok"

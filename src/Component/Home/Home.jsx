@@ -106,9 +106,9 @@ const Home = () => {
   },
   {
     id: 4,
-    shop: "GFTBX Personalized Photo Wooden Diary",
+    shop: " Wooden Dairy  Personalized Photo "  ,
     // name: "Noise ColorFit Ultra 3 Bluetooth Calling Smartwatch",
- price: 0.0,
+ price: 5.28,
     rating: 4,
      stock: true, // ✅ In Stock
     img: "https://i.etsystatic.com/24564691/r/il/86f6fb/3119327852/il_570xN.3119327852_5g14.jpg",
@@ -284,6 +284,7 @@ const chunkArray = (arr, size) =>
 
 
       <Banner />
+      
       {/* ----------------------Shop By Category------------------ */}
       <div className="mx-4 my-5">
   <div className="d-flex align-items-center">
@@ -321,6 +322,7 @@ const chunkArray = (arr, size) =>
     ))}
   </div>
 </div>
+
 
         {/* ----------------------3 carde create ------------------ */}
      <div className="mx-4 my-5">
@@ -686,5 +688,4 @@ const chunkArray = (arr, size) =>
     </div>
   );
 };
-
 export default Home;

@@ -104,13 +104,13 @@ const CartPage = () => {
                             color: "gray",
                           }}
                         >
-                          ${item.oldPrice.toFixed(2)}
+                          Rs.{item.oldPrice.toFixed()}
                         </span>{" "}
                         <span style={{ color: "red" }}>- {item.discount}%</span>{" "}
                         <span
                           style={{ color: "blue", fontWeight: "bold" }}
                         >
-                          ${item.price.toFixed(2)}
+                          Rs.{item.price.toFixed()}
                         </span>
                       </p>
                     </div>
@@ -138,7 +138,7 @@ const CartPage = () => {
                         fontWeight: "bold",
                       }}
                     >
-                      ${(item.price * item.quantity).toFixed(2)}
+                      Rs.{(item.price * item.quantity).toFixed()}
                     </h6>
                     <FaTrash
                       style={{ cursor: "pointer", color: "black" }}
@@ -168,78 +168,62 @@ const CartPage = () => {
             <hr />
             <div className="d-flex justify-content-between">
               <span className="fw-bold">{cart.length} items</span>
-              <span>${subtotal.toFixed(2)}</span>
+              <span>Rs.{subtotal.toFixed()}</span>
             </div>
             <div className="d-flex justify-content-between pt-3">
               <span className="fw-bold">Shipping</span>
-              <span>${shipping.toFixed(2)}</span>
+              <span>Rs.{shipping.toFixed()}</span>
             </div>
             {discount > 0 && (
               <div className="d-flex justify-content-between text-success">
                 <span>Discount ({discount}%)</span>
-                <span>- ${discountAmount.toFixed(2)}</span>
+                <span>- Rs.{discountAmount.toFixed()}</span>
               </div>
             )}
             <hr />
             <div className="d-flex justify-content-between pt-3 pb-3">
               <span className="fw-bold">Total</span>
-              <span>${total.toFixed(2)}</span>
+              <span>Rs.{total.toFixed()}</span>
             </div>
 
             {/* Promo Code */}
-            <div className="mt-3 d-flex">
-              <input
-                type="text"
-                placeholder="Promo code"
-                value={promoCode}
-                onChange={(e) => setPromoCode(e.target.value)}
-                className="form-control me-2"
-                style={{ flex: 1 }}
-              />
-              <button
-                className="btn btn-primary fw-bold"
-                onClick={applyPromo}
-              >
-                Apply
-              </button>
-            </div>
+          
 
             {/* Checkout button */}
-            <div className="d-flex justify-content-center">
-                   {/* Checkout button */}
-            <button
-  className="btn w-75 mt-3"
-  style={{
-    fontWeight: "bold",
-    fontSize: "16px",
-    padding: "10px",
-    backgroundColor: "black",
-    color: "white",
-    borderRadius: "8px",
-  }}
-  onClick={() => {
-    const orderDetails = cart
-      .map(
-        (item) =>
-          `• ${item.name} x${item.quantity} = $${(
-            item.price * item.quantity
-          ).toFixed(2)}`
-      )
-      .join("%0A"); // WhatsApp line break
+          <div className="d-flex justify-content-center">
+  {/* Checkout button */}
+  <button
+    className="btn w-75 mt-3"
+    style={{
+      fontWeight: "bold",
+      fontSize: "16px",
+      padding: "10px",
+      backgroundColor: "black",
+      color: "white",
+      borderRadius: "8px",
+    }}
+    onClick={() => {
+      const orderDetails = cart
+        .map(
+          (item) =>
+            `• ${item.name} x${item.quantity} = Rs.${(
+              item.price * item.quantity
+            ).toFixed()}`
+        )
+        .join("%0A"); // WhatsApp line break
 
-    const message = `Hello, I want to confirm my order:%0A${orderDetails}%0A%0ATotal: $${total.toFixed(
-      2
-    )}`;
+      const message = `Hello, I want to confirm my order:%0A${orderDetails}%0A%0ATotal: Rs.${total.toFixed()}`;
 
-    window.open(
-      `https://wa.me/923019854185?text=${message}`,
-      "_blank"
-    );
-  }}
->
-  PROCEED TO CHECKOUT
-</button>
-            </div>
+      window.open(
+        `https://wa.me/923019854185?text=${message}`,
+        "_blank"
+      );
+    }}
+  >
+     PLACE ORDER ON WHATSAPP
+  </button>
+</div>
+
           </div>
         </div>
       </div>

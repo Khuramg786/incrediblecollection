@@ -95,10 +95,10 @@ const Checkout = () => {
 
             {/* ✅ Price */}
             <div className="d-flex align-items-center my-3">
-              <h3 className="text-success fw-bold mb-0">${discountedPrice.toFixed(2)}</h3>
+              <h3 className="text-success fw-bold mb-0">Rs.{discountedPrice.toFixed()}</h3>
               {product.discount > 0 && (
                 <p className="text-decoration-line-through text-muted ms-3 mb-0 fs-5">
-                  ${product.price.toFixed(2)}
+                  Rs.{product.price.toFixed()}
                 </p>
               )}
             </div>

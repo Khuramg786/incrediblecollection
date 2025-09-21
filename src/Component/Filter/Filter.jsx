@@ -1,235 +1,470 @@
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Checkout from "../Checkout/Checkout";
+
 // ✅ Sample Products
 const productsData = [
   {
     id: 1,
-    name: "MUG PRINTING",
-    shop: "SEND IMAGES ",
-    price: 0.0,
-    discount: 10,
-    color: "Gray",
-    size: "5-6",
-    rating: 5,
-    stock: true,
-    image:
-      "https://stationeria.pk/cdn/shop/products/photo-magic-mug_personal_1-600x600_2048x.jpg?v=1594477715",
-  },
-  {
-    id: 2,
-    name: "custom screen printed t shirts products",
-    shop: "SEND IMAGES",
-    price: 0.0,
-    discount: 15,
-    color: "White",
-    size: "5-8",
-    rating: 2,
-    stock: true,
-    image:
-      "https://i.ebayimg.com/thumbs/images/g/vJMAAeSwytponf1l/s-l1200.jpg",
-  },
-  {
-    id: 3,
-    name: "Brown Corporate Wooden Dairy, For Gifts,",
-    shop: "SmartShop",
-    price: 0.0,
-    discount: 0,
+   
+       name: "Brown Corporate Wooden Diary",
+    shop: "5*7-Inchez",
+    price: 1300,
+    discount: 11,
     color: "Black",
-    size: "N/A",
-    rating: 1,
+    rating: 3,
     stock: true,
     image:
       "https://5.imimg.com/data5/SELLER/Default/2022/11/FQ/EV/EF/41051893/corporate-wooden-dairy-500x500.jpg",
   },
   {
-    id: 4,
-    name: "Original Best Bracelet for Unisex Material ",
-    shop: "Send Name",
-    price: 0.0,
-    discount: 0,
-    color: "White",
-    size: "N/A",
-    rating: 6,
-    stock: false,
+    id: 2,
+    name: "Metal Pen Keychain Gift Set ",
+    shop: "Customized Pen",
+    price: 600,
+    discount: 10,
+    color: "black",
+    size: "Large",
+    rating: 3,
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/Metal%20Pen%20&%20Metral%20Kechai(450).png?updatedAt=1758434172852",
+  },
+  {
+    id: 3,
+    name: "Cufflinks Premium Name Engraved",
+    shop: "Customized Rolex ",
+    price: 1300,
+    discount: 10,
+    color: "black",
+    size: "Large",
+    rating: 4,
+    stock: true,
     image:
-      "https://customizekaralo.in/cdn/shop/files/Sameer_Silver.webp?v=1751974867",
+      "https://ik.imagekit.io/jkths6fjn/Rolex%20Cufflinks%20Customizd%20(850).png?updatedAt=1758434875954",
+  },
+  {
+    id: 4,
+    name: "Wooden Keychain With Name",
+    shop: "Customized Keychain",
+    price: 200,
+    discount: 10,
+    color: "green",
+    size: "Large",
+    rating: 4,
+    stock: true,
+    image:
+      "https://ik.imagekit.io/jkths6fjn/Inkcreadablecollection(Wood%20Keychain)-200.png?updatedAt=1758435169252",
   },
   {
     id: 5,
-    name: "Refand Makeup Brushes",
-    shop: "Brush Set 16 Pcs",
-    price: 0.0,
-    discount: 8,
+    name: "Personalized Premium Metal Keychain",
+    shop: "Customized Keychain",
+    price: 340,
+    discount: 10,
     rating: 3,
-    color: "Gray",
-    size: "N/A",
+    color: "black",
+    size: "Large",
     stock: true,
-    image:
-      "https://m.media-amazon.com/images/I/513RUgD3FhL.jpg",
+    image: "https://ik.imagekit.io/jkths6fjn/Inkcreadablecollection-Metal%20Keychain%20Customized%20-250.png?updatedAt=1758435380840",
   },
-  {
+    {
     id: 6,
-    name: " Buy Ktrs Enterprise Die-Cast Car 1:24 Metal Cars ",
-    shop: "Avilable",
-    price: 0.0,
-    discount: 8,
-    color: "White",
-    size: "N/A",
+    name: "Meta Mug ",
+    shop: "Customized Mug",
+    price: 1200,
+    discount: 10,
     rating: 4,
+    color: "black",
+    size: "Large",
     stock: true,
-    image: "https://www.jiomart.com/images/product/original/rvwakne8uk/ktrs-enterprise-die-cast-car-1-24-metal-cars-alloy-pull-back-car-metal-die-cast-pull-back-with-openable-doors-unbreakable-light-music-car-toys-g-patton-product-images-orvwakne8uk-p606560787-0-202312060321.jpg?im=Resize=(1000,1000)",
-  },
-  {
-    id: 7,
-    name: "Ducare Black Pencil Pro ",
-    shop: "11-Piece",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
-    rating: 2,
-    stock: true,
-    image:
-      "https://image.cdn.ishopastro.com/eyJidWNrZXQiOiJwcm9kLW1lZGlhLW15c2hvcGFzdHJvLWNvbSIsImtleSI6IjQ2MDY4NzQ3ODY3MDIyMC9tZWRpYS9pbWFnZS9iODM2NDBjODU1MjAzNDE3Njc2MDMwMS5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjg1MH0sInJvdGF0ZSI6bnVsbH19?w=850",
-  },
-  {
-    id: 7,
-    name: "Professional Makeup Brush ",
-    shop: "Avilable",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
-    stock: true,
-    rating: 2,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzVp4Hvvo8riDFJKancpt9mxeo-l0EAu31fw&s",
-  },
-  {
-    id: 7,
-    name: "Jessup Vegan Makeup Brushes Set Professional",
-    shop: "Available",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
-    rating: 3,
-    stock: true,
-    image:
-      "https://discountstore.pk/cdn/shop/files/71d2qszyr4L.jpg?v=1730980645",
-  },
-  {
-    id: 7,
-    name: "Discord Car",
-    shop: "Avilable",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
-    rating: 4,
-    stock: true,
-    image:
-      "https://t4.ftcdn.net/jpg/07/42/50/05/360_F_742500551_Ae2dvu7igt9oyf09DxFEfBrXYhuLrq4w.jpg",
-  },
-  {
-    id: 7,
-    name: "Toyota Land Cruiser Silver",
-    shop: "Avilable",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
-    rating: 5,
-    stock: true,
-    image:
-      "https://atlas-content-cdn.pixelsquid.com/assets_v2/273/2735978488279340733/jpeg-600/G03.jpg?modifiedAt=1",
-  },
-  {
-    id: 8,
-    name: "Die-Cast Model Car Silver",
-    shop: "Avilable",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
-    rating: 5,
-    stock: true,
-    image:
-      "https://m.media-amazon.com/images/I/51VIh8VrPTL._UF1000,1000_QL80_.jpg",
-  },
-  {
-    id: 9,
-    name: "Bestie Toys  Silver",
-    shop: "Avilable",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
-    rating: 5,
-    stock: true,
-    image:
-      "https://rukminim2.flixcart.com/image/704/844/xif0q/vehicle-pull-along/8/e/4/1-32-scale-exclusive-alloy-metal-pull-back-die-cast-car-model-original-imah6uffvmjdyytf.jpeg?q=90&crop=false",
-  },
-   {
-    id: 9,
-    name: "Sports Toy Car Metal Pull Back Diecast Car",
-    shop: "Avilable",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
-    rating: 5,
-    stock: true,
-    image:
-      "https://m.media-amazon.com/images/I/71uIgbr8yEL._UF1000,1000_QL80_.jpg",
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Mate%20Mug%20Customized-1200.png?updatedAt=1758435664908",
   },
      {
-    id: 10,
-    name: "1:32 Metal Lyka Hypersport Diecast Car",
-    shop: "Avilable",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
-    rating: 5,
+    id: 7,
+    name: "Challa Ring ",
+    shop: "Customized Ring",
+    price: 350,
+    discount: 10,
+    rating: 4,
+    color: "black",
+    size: "Large",
     stock: true,
-    image:
-      "https://5.imimg.com/data5/SELLER/Default/2024/6/426935227/FU/OV/ZV/95601433/1-32-metal-lyka-hypersport-diecast-car-opening-doors-vehicle-toy-car-6-inches-music-and-lights-500x500.jpg",
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Challa%20Ring%20Customized-350.png?updatedAt=1758436018841",
+  },
+     {
+    id: 8,
+    name: "Brocken heart and ring ",
+    shop: "Customized Heart",
+    price: 1200,
+    discount: 10,
+    rating: 3,
+    color: "black",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Brocken%20Heart%20&%20Ring%20Customized%20-%201200.jpg?updatedAt=1758436467677",
+  },
+  {
+    id: 9,
+    name: "Wooden Pen Stand For Office",
+    shop: "Customized Stand/Pen",
+    price: 1500,
+    discount: 10,
+    rating: 3,
+    color: "Grey",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollections-Wood%20pen%20Case%20Customized-%201500.jpg?updatedAt=1758436793024",
+  }, {
+    id: 10,
+    name: "Hot and Cold Tumbler with Free Name 500ml-",
+    shop: "Customized Tumbler",
+    price: 2300,
+    discount: 10,
+    rating: 4,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Tumbler%20Hote%20and%20Cold%20Customized%20-1650.jpeg?updatedAt=1758437313560",
+  },
+    {
+    id: 17,
+    name: "Calligraphy Metal  ",
+    shop: "Customized Calligraphy",
+    price: 7080,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Calligraphy%20Metal.jpg?updatedAt=1758439339594",
+  },
+  {
+    id: 11,
+    name: "Apron Customized",
+    shop: "Customized Apron",
+    price: 700,
+    discount: 10,
+    rating: 2,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Apron%20Customized%20-700.jpg?updatedAt=1758437558052",
+  },
+  {
+    id: 12,
+    name: "Album Invelp VIP Locket ",
+    shop: "Customized Album",
+    price: 1276,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Album%20Invelp%20VIP%20Locket%20Customized-%201265.jpg?updatedAt=1758437810797",
   },
    {
-    id: 11,
-    name: "1:32 Metal Lyka Hypersport Diecast Car",
-    shop: "Avilable",
-    price: 0.0,
-    discount: 8,
-    color: "Blue",
-    size: "N/A",
+    id: 13,
+    name: "Mobile Case ",
+    shop: "Customized case",
+    price: 900,
+    discount: 10,
     rating: 5,
+    color: "White",
+    size: "Large",
     stock: true,
-    image:
-      "https://images-na.ssl-images-amazon.com/images/I/81aY8FT25lL.jpg",
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Mobile%20Case-900.png?updatedAt=1758438498738",
   },
-  
+    {
+    id: 14,
+    name: "Eidi Envelop Customized",
+    shop: "Customized ",
+    price: 500,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Eidi%20Envelopes-500.jpg?updatedAt=1758438716329",
+  },
+  {
+    id: 15,
+    name: "Flag Office Table",
+    shop: "Customized Flag",
+    price: 0.0,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Flag%20office%20Table-.png?updatedAt=1758438883256",
+  },
+   {
+    id: 16,
+    name: "Sigrate Case Box ",
+    shop: "Customized Sigrate",
+    price: 1300,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Sigrate%20Case%20Box%20Customized.jpg?updatedAt=1758439163215",
+  },
+   {
+    id: 17,
+    name: "Temperature Display Coffee Mug ",
+    shop: "Customized",
+    price: 1489,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Temprature%20Coffee%20Mug%20Customized%20-1500.png?updatedAt=1758442622257",
+  },
+   {
+    id: 19,
+    name: "Mega Power Light Base Acrylic Lamps.",
+    shop: "Customized Lamps",
+    price: 0.0,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Light%20Lamp%20Customized.jpg?updatedAt=1758442956217",
+  },
+   {
+    id: 20,
+    name: "PERSONALIZED TREE FRAME ",
+    shop: "Customized Tree Frame",
+    price: 2000,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Tree%20Frames-2000.jpeg?updatedAt=1758443173160",
+  },
+   {
+    id: 21,
+    name: "Logo Stamp for Business",
+    shop: "Customized Stamp",
+    price: 0.0,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Stamp%20Customized-0.0.jpg?updatedAt=1758443351190",
+  },
+   {
+    id: 22,
+    name: "Mega Power Light Base Acrylic Lamps.",
+    shop: "Customized Lamps",
+    price: 0.0,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Light%20Lamp%20Customized.jpg?updatedAt=1758442956217",
+  },
+   {
+    id: 23,
+    name: "Customize Name Bracelet",
+    shop: "More Types",
+    price: 800,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Bracelet-800.jpeg?updatedAt=1758443885310",
+  },
+   {
+    id: 24,
+    name: "Clock Customized ",
+    shop: "More Types",
+    price: 1000,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Customized%20Wooden%20Clock.jpg?updatedAt=1758444125557",
+  },
+   {
+    id: 25,
+    name: "House Name Plate Customized",
+    shop: "More Types",
+    price: 2500,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-House%20Name%20Plate%20Customized.jpg?updatedAt=1758444402740",
+  },
+     {
+    id: 26,
+    name: "Pillow Customized",
+    shop: "More Types",
+    price: 500,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Pillow%20Customized.jpg?updatedAt=1758444524321",
+  },
+   {
+    id: 27,
+    name: "Printed Glass Shield",
+    shop: "More Types",
+    price: 500.00,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Glass%20Shields.png?updatedAt=1758444793845",
+  },
+  {
+    id: 28,
+    name: "Printed Glass Shield",
+    shop: "More Types",
+    price: 500.00,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Glass%20Shields.png?updatedAt=1758444793845",
+  },
+  {
+    id: 29,
+    name: "Visiting Card Business",
+    shop: "More Types",
+    price: 20,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Bussiness%20card.jpg?updatedAt=1758445037906",
+  },
+    {
+    id: 30,
+    name: "Cap VIP DTF Print",
+    shop: "More Types",
+    price: 700,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Cap%20Vip%20DTF%20Print.jpeg?updatedAt=1758445159890",
+  },
+  {
+    id: 31,
+    name: "Wadding Dupatta ",
+    shop: "More Types",
+    price: 1500,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Wedding%20Dupatta.jpg?updatedAt=1758445292865",
+  },
+   {
+    id: 32,
+    name: "Ribbon Patti Customized",
+    shop: "More Types",
+    price: 80,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Ribbon%20Patti%20Customized.jpg?updatedAt=1758445463899",
+  },
+  {
+    id: 33,
+    name: "Number Plate Customized",
+    shop: "More Types",
+    price: 600,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Number%20Plate%20Customized.jpg?updatedAt=1758445668277",
+  },
+   {
+    id: 34,
+    name: "Puzzle Game Customized",
+    shop: "More Types",
+    price: 300,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Puzzle%20Game%20Customized.jpg?updatedAt=1758445835091",
+  },
+   {
+    id: 33,
+    name: "Car Hanger  Customized",
+    shop: "More Types",
+    price: 1400,
+    discount: 10,
+    rating: 5,
+    color: "White",
+    size: "Large",
+    stock: true,
+    image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Car%20Hanger%20Customized.jpg?updatedAt=1758445981673",
+  },
 ];
 
+// ✅ Filter Component
 const Filter = () => {
   const [filters, setFilters] = useState({
     stock: false,
     color: "",
     size: "",
+    priceRange: "",
   });
   const [sort, setSort] = useState("relevance");
   const [openFilter, setOpenFilter] = useState(""); // Track dropdown
   const [currentPage, setCurrentPage] = useState(1);
+  const [search, setSearch] = useState(""); // ✅ Search state
   const productsPerPage = 8;
 
   // Apply Filters
   const filteredProducts = productsData.filter((product) => {
     if (filters.stock && !product.stock) return false;
     if (filters.color && product.color !== filters.color) return false;
-    if (filters.ram && product.size !== filters.size) return false;
+    if (filters.size && product.size !== filters.size) return false;
+
+    // ✅ Price filter
+    if (filters.priceRange) {
+      const discountedPrice =
+        product.price - (product.price * product.discount) / 100;
+      if (filters.priceRange === "under20" && discountedPrice > 20) return false;
+      if (filters.priceRange === "20to40" && (discountedPrice < 20 || discountedPrice > 40))
+        return false;
+      if (filters.priceRange === "above40" && discountedPrice < 40) return false;
+    }
+
+    if (
+      search &&
+      !product.name.toLowerCase().includes(search.toLowerCase()) &&
+      !product.shop.toLowerCase().includes(search.toLowerCase())
+    )
+      return false;
+
     return true;
   });
 
@@ -270,13 +505,12 @@ const Filter = () => {
       <div className="row">
         {/* Sidebar Filters */}
         <div
-          className="col-md-3 p-3 d-flex flex-column"
+          className="col-md-3 p-3 d-flex flex-column mb-3"
           style={{
             background: "linear-gradient(145deg, #ffffff, #f3f3f3)",
             borderRadius: "15px",
             boxShadow: "8px 8px 20px #d1d9e6, -8px -8px 20px #ffffff",
             minHeight: "85vh",
-            position: "relative",
           }}
         >
           <h5 className="mb-3">Filter By</h5>
@@ -349,37 +583,37 @@ const Filter = () => {
             )}
           </div>
 
-          {/* RAM */}
+          {/* Size */}
           <div className="mt-3">
             <div
               className="d-flex justify-content-between align-items-center"
               style={{ cursor: "pointer" }}
-              onClick={() => toggleFilter("ram")}
+              onClick={() => toggleFilter("size")}
             >
               <h6 className="mb-0">Size</h6>
               {openFilter === "size" ? <FaMinus /> : <FaPlus />}
             </div>
-            {openFilter === "ram" && (
+            {openFilter === "size" && (
               <div className="mt-2">
-                {["5-6 ", "	8-15 ", "	8-15 ", "N/A"].map((r) => (
-                  <div className="form-check" key={r}>
+                {["Small", "Medium", "Large"].map((s) => (
+                  <div className="form-check" key={s}>
                     <input
                       type="radio"
                       className="form-check-input"
-                      name="ram"
-                      checked={filters.ram === r}
-                      onChange={() => setFilters({ ...filters, ram: r })}
+                      name="size"
+                      checked={filters.size === s}
+                      onChange={() => setFilters({ ...filters, size: s })}
                     />
-                    <label className="form-check-label">{r}</label>
+                    <label className="form-check-label">{s}</label>
                   </div>
                 ))}
                 <div className="form-check">
                   <input
                     type="radio"
                     className="form-check-input"
-                    name="ram"
-                    checked={filters.ram === ""}
-                    onChange={() => setFilters({ ...filters, ram: "" })}
+                    name="size"
+                    checked={filters.size === ""}
+                    onChange={() => setFilters({ ...filters, size: "" })}
                   />
                   <label className="form-check-label">All</label>
                 </div>
@@ -387,45 +621,122 @@ const Filter = () => {
             )}
           </div>
 
-          {/* ✅ Bottom Images */}
-          <div className="mt-auto ">
-            <img
-              src="https://www.lenovo-online.co.za/cdn/shop/files/mobile-carousel-banner-100_f4d7c3b0-2e26-48ba-9290-605158d1fee5.jpg?v=1753946830&width=3000"
-              alt="Bottom Img 1"
-              style={{
-                width: "100%",       // ✅ Full width
-                borderRadius: "10px",
-                boxShadow: "4px 4px 12px rgba(0,0,0,0.1)",
-                marginBottom: "15px", // ✅ spacing between images
-              }}
-            />
+          {/* Price */}
+          <div className="mt-3">
+            <div
+              className="d-flex justify-content-between align-items-center"
+              style={{ cursor: "pointer" }}
+              onClick={() => toggleFilter("price")}
+            >
+              <h6 className="mb-0">Price</h6>
+              {openFilter === "price" ? <FaMinus /> : <FaPlus />}
+            </div>
+            {openFilter === "price" && (
+              <div className="mt-2">
+                <div className="form-check">
+                  <input
+                    type="radio"
+                    className="form-check-input"
+                    name="price"
+                    checked={filters.priceRange === "under20"}
+                    onChange={() =>
+                      setFilters({ ...filters, priceRange: "under20" })
+                    }
+                  />
+                  <label className="form-check-label">Under Rs.20</label>
+                </div>
+                <div className="form-check">
+                  <input
+                    type="radio"
+                    className="form-check-input"
+                    name="price"
+                    checked={filters.priceRange === "20to40"}
+                    onChange={() =>
+                      setFilters({ ...filters, priceRange: "20to40" })
+                    }
+                  />
+                  <label className="form-check-label">Rs.20 - Rs.40</label>
+                </div>
+                <div className="form-check">
+                  <input
+                    type="radio"
+                    className="form-check-input"
+                    name="price"
+                    checked={filters.priceRange === "above40"}
+                    onChange={() =>
+                      setFilters({ ...filters, priceRange: "above40" })
+                    }
+                  />
+                  <label className="form-check-label">Above Rs.40</label>
+                </div>
+                <div className="form-check">
+                  <input
+                    type="radio"
+                    className="form-check-input"
+                    name="price"
+                    checked={filters.priceRange === ""}
+                    onChange={() => setFilters({ ...filters, priceRange: "" })}
+                  />
+                  <label className="form-check-label">All</label>
+                </div>
+              </div>
+            )}
           </div>
-
-          {/* <div className="mt-auto">
-  <img
-    src="https://haroontraders.pk/cdn/shop/files/HP_LAPTOPS_SMALL_BANNER_1066x.jpg?v=1723123785"
-    alt="Bottom Img 2"
-    style={{
-      width: "100%",       // ✅ Full width
-      borderRadius: "10px",
-      boxShadow: "4px 4px 12px rgba(0,0,0,0.1)",
-    }}
-  />
-</div> */}
-
         </div>
-
 
         {/* Product List */}
         <div className="col-md-9">
-          <div className="d-flex justify-content-between align-items-center mb-3">
+          <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3">
             <h5>{sortedProducts.length} Products</h5>
+
+            {/* 🔍 Search Bar */}
+            <div className="row mb-3 w-50">
+              <div className="col-12 d-flex justify-content-center">
+                <div
+                  className="input-group w-100"
+                  style={{
+                    maxWidth: "700px",
+                  }}
+                >
+                  <span
+                    className="input-group-text"
+                    style={{
+                      borderRadius: "30px 0 0 30px",
+                      backgroundColor: "#fff",
+                      borderRight: "none",
+                      padding: "12px 18px",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                    }}
+                  >
+                    <i className="bi bi-search fs-5"></i>
+                  </span>
+
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Search products..."
+                    value={search}
+                    onChange={(e) => {
+                      setSearch(e.target.value);
+                      setCurrentPage(1);
+                    }}
+                    style={{
+                      borderRadius: "0 30px 30px 0",
+                      padding: "12px 10px",
+                      fontSize: "1rem",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+
             <select
-              className="form-select w-auto"
+              className="form-select w-auto mt-2 mt-md-0"
               value={sort}
               onChange={(e) => {
                 setSort(e.target.value);
-                setCurrentPage(1); // reset pagination on sort
+                setCurrentPage(1);
               }}
             >
               <option value="relevance">Relevance</option>
@@ -436,128 +747,136 @@ const Filter = () => {
 
           {/* Products */}
           <div className="row">
-            {currentProducts.map((product) => {
-              const discountedPrice =
-                product.price - (product.price * product.discount) / 100;
-              return (
-                <div className="col-md-3 mb-4" key={product.id}>
-                  <div
-                    className="card h-100"
-                    style={{
-                      height: "400px",
-                      borderRadius: "12px",
-                      boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    {product.discount > 0 && (
-                      <span className="badge bg-danger position-absolute m-2">
-                        -{product.discount}%
-                      </span>
-                    )}
-                    <img
-                      src={product.image}
-                      className="card-img-top"
-                      alt={product.name}
-                      style={{ height: "150px", objectFit: "contain" }}
-                    />
-                    <div className="card-body d-flex flex-column justify-content-between">
-                      <div>
-                        <h6 className="card-title text-truncate">{product.name}</h6>
-
-                        {/* 🏪 Shop + ⭐ Rating in one line */}
-                        <div className="d-flex justify-content-between align-items-center mb-2">
+            {currentProducts.length > 0 ? (
+              currentProducts.map((product) => {
+                const discountedPrice =
+                  product.price - (product.price * product.discount) / 100;
+                return (
+                  <div className="col-6 col-md-3 mb-4" key={product.id}>
+                    <div
+                      className="card h-100"
+                      style={{
+                        height: "400px",
+                        borderRadius: "12px",
+                        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                      }}
+                    >
+                      {product.discount > 0 && (
+                        <span className="badge bg-danger position-absolute m-2">
+                          -{product.discount}%
+                        </span>
+                      )}
+                      <img
+                        src={product.image}
+                        className="card-img-top"
+                        alt={product.name}
+                        style={{ height: "200px", objectFit: "contain" }}
+                      />
+                      <div className="card-body d-flex flex-column justify-content-between">
+                        <div>
+                          <h6 className="card-title text-truncate">
+                            {product.name}
+                          </h6>
                           <p className="text-muted mb-0">{product.shop}</p>
+                          {/* ⭐ Rating */}
                           <div>
                             {[...Array(5)].map((_, i) => (
                               <i
                                 key={i}
-                                className={`bi ${i < product.rating ? "bi-star-fill text-warning" : "bi-star text-muted"
-                                  }`}
+                                className={`bi ${
+                                  i < product.rating
+                                    ? "bi-star-fill text-warning"
+                                    : "bi-star text-muted"
+                                }`}
                               ></i>
                             ))}
                           </div>
+                          {/* 💲 Price */}
+                          <div className="d-flex justify-content-between align-items-center">
+                            <h5 className="text-primary mb-0">
+                              Rs.{discountedPrice.toFixed()} 
+                            </h5>
+                            {product.discount > 0 && (
+                              <p className="text-decoration-line-through mb-0 text-muted">
+                                Rs.{product.price}
+                              </p>
+                            )}
+                          </div>
                         </div>
-
-                        {/* 💲 Price Section */}
-                        <div className="d-flex justify-content-between align-items-center">
-                          <h5 className="text-primary mb-0">${discountedPrice.toFixed(2)}</h5>
-                          {product.discount > 0 && (
-                            <p className="text-decoration-line-through mb-0 text-muted">
-                              ${product.price}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-
-                      <div className="d-flex justify-content-between align-items-center mt-3">
-                        <span
-                          className={`badge ${product.stock ? "bg-success" : "bg-danger"
+                        <div className="d-flex justify-content-between align-items-center mt-3">
+                          <span
+                            className={`badge ${
+                              product.stock ? "bg-success" : "bg-danger"
                             }`}
-                        >
-                          {product.stock ? "In Stock" : "Out of Stock"}
-                        </span>
-                        <Link
-                          to="/Checkout"
-                          state={{ product }} // ✅ send product data
-                        >
-                          <button
-                            className="btn btn-dark btn-sm fw-bold"
-                            disabled={!product.stock}
                           >
-                            Order Now
-                          </button>
-                        </Link>
-
+                            {product.stock ? "In Stock" : "Out of Stock"}
+                          </span>
+                          <Link to="/Checkout" state={{ product }}>
+                            <button
+                              className="btn btn-dark btn-sm fw-bold"
+                              disabled={!product.stock}
+                            >
+                              Order Now
+                            </button>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+            ) : (
+              <p className="text-center">No products found.</p>
+            )}
           </div>
 
-
-        </div>
-        {/* Pagination */}
-        <nav>
-          <ul className="pagination justify-content-center">
-            <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
-              <button
-                className="page-link"
-                onClick={() => setCurrentPage(currentPage - 1)}
-              >
-                Previous
-              </button>
-            </li>
-
-            {[...Array(totalPages)].map((_, index) => (
-              <li
-                key={index}
-                className={`page-item ${currentPage === index + 1 ? "active" : ""
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <nav>
+              <ul className="pagination justify-content-center">
+                <li
+                  className={`page-item ${
+                    currentPage === 1 ? "disabled" : ""
                   }`}
-              >
-                <button
-                  className="page-link"
-                  onClick={() => setCurrentPage(index + 1)}
                 >
-                  {index + 1}
-                </button>
-              </li>
-            ))}
-
-            <li
-              className={`page-item ${currentPage === totalPages ? "disabled" : ""
-                }`}
-            >
-              <button
-                className="page-link"
-                onClick={() => setCurrentPage(currentPage + 1)}
-              >
-                Next
-              </button>
-            </li>
-          </ul>
-        </nav>
+                  <button
+                    className="page-link"
+                    onClick={() => setCurrentPage(currentPage - 1)}
+                  >
+                    Previous
+                  </button>
+                </li>
+                {[...Array(totalPages)].map((_, index) => (
+                  <li
+                    key={index}
+                    className={`page-item ${
+                      currentPage === index + 1 ? "active" : ""
+                    }`}
+                  >
+                    <button
+                      className="page-link"
+                      onClick={() => setCurrentPage(index + 1)}
+                    >
+                      {index + 1}
+                    </button>
+                  </li>
+                ))}
+                <li
+                  className={`page-item ${
+                    currentPage === totalPages ? "disabled" : ""
+                  }`}
+                >
+                  <button
+                    className="page-link"
+                    onClick={() => setCurrentPage(currentPage + 1)}
+                  >
+                    Next
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          )}
+        </div>
       </div>
     </div>
   );
