@@ -6,9 +6,8 @@ import { Link } from "react-router-dom";
 const productsData = [
   {
     id: 1,
-   
-       name: "Brown Corporate Wooden Diary",
-    shop: "5*7-Inchez",
+    name: "Customize Wooden Diary",
+    shop: "Shop the Brown Corporate Wooden Diary from 5*7-Inchez. Premium quality 5*7 inch office notebook with high-quality pages. Perfect for professionals & students. Order online now!",
     price: 1300,
     discount: 11,
     color: "Black",
@@ -20,7 +19,7 @@ const productsData = [
   {
     id: 2,
     name: "Metal Pen Keychain Gift Set ",
-    shop: "Customized Pen",
+    shop: "Discover the Metal Pen Keychain Gift Set from Customized Pen. Perfect for gifting or office use. Premium metal keychain with high-quality pen. Buy online today!",
     price: 600,
     discount: 10,
     color: "black",
@@ -32,7 +31,7 @@ const productsData = [
   {
     id: 3,
     name: "Cufflinks Premium Name Engraved",
-    shop: "Customized Rolex ",
+    shop: "Get the Premium Name Engraved Cufflinks from Customized Rolex. Personalized luxury accessory for gifting or personal style. High-quality craftsmanship. Shop online now!",
     price: 1300,
     discount: 10,
     color: "black",
@@ -45,7 +44,7 @@ const productsData = [
   {
     id: 4,
     name: "Wooden Keychain With Name",
-    shop: "Customized Keychain",
+    shop: "Shop Wooden Keychains With Name from Customized Keychain. Unique, stylish, and perfect as personalized gifts. Premium quality keychains available online. Order today!",
     price: 200,
     discount: 10,
     color: "green",
@@ -58,7 +57,7 @@ const productsData = [
   {
     id: 5,
     name: "Personalized Premium Metal Keychain",
-    shop: "Customized Keychain",
+    shop: "Explore Personalized Premium Metal Keychain from Customized Keychain. Perfect custom gift, high-quality metal keychain for daily use. Order online today!",
     price: 340,
     discount: 10,
     rating: 3,
@@ -67,10 +66,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/Inkcreadablecollection-Metal%20Keychain%20Customized%20-250.png?updatedAt=1758435380840",
   },
-    {
+  {
     id: 6,
     name: "Meta Mug ",
-    shop: "Customized Mug",
+    shop: "Buy the Meta Mug from Customized Mug. Personalized coffee mug with premium quality for gifting or daily use. Unique designs available online. Shop now!",
     price: 1200,
     discount: 10,
     rating: 4,
@@ -79,10 +78,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Mate%20Mug%20Customized-1200.png?updatedAt=1758435664908",
   },
-     {
+  {
     id: 7,
     name: "Challa Ring ",
-    shop: "Customized Ring",
+    shop: "Shop the Challa Ring from Customized Ring. Custom engraved ring, perfect as a unique gift or stylish accessory. High-quality materials. Buy online now!",
     price: 350,
     discount: 10,
     rating: 4,
@@ -91,10 +90,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Challa%20Ring%20Customized-350.png?updatedAt=1758436018841",
   },
-     {
+  {
     id: 8,
     name: "Brocken heart and ring ",
-    shop: "Customized Heart",
+    shop: "Get the Broken Heart and Ring set from Customized Heart. Perfect romantic gift for loved ones. Premium quality, customizable design. Shop online now!",
     price: 1200,
     discount: 10,
     rating: 3,
@@ -106,7 +105,7 @@ const productsData = [
   {
     id: 9,
     name: "Wooden Pen Stand For Office",
-    shop: "Customized Stand/Pen",
+    shop: "Shop Wooden Pen Stand For Office from Customized Stand/Pen. Premium desk organizer for professional and home use. High-quality wood, stylish design. Order now!",
     price: 1500,
     discount: 10,
     rating: 3,
@@ -117,7 +116,7 @@ const productsData = [
   }, {
     id: 10,
     name: "Hot and Cold Tumbler with Free Name 500ml-",
-    shop: "Customized Tumbler",
+    shop: "Buy Hot and Cold Tumbler 500ml from Customized Tumbler. Personalized drinkware for hot or cold beverages, with free name customization. Shop online today!",
     price: 2300,
     discount: 10,
     rating: 4,
@@ -126,10 +125,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Tumbler%20Hote%20and%20Cold%20Customized%20-1650.jpeg?updatedAt=1758437313560",
   },
-    {
-    id: 17,
+  {
+    id: 18,
     name: "Calligraphy Metal  ",
-    shop: "Customized Calligraphy",
+    shop: "Discover Calligraphy Metal from Customized Calligraphy. Elegant wall art, premium quality, perfect for home, office, or gifting. Shop online now!",
     price: 7080,
     discount: 10,
     rating: 5,
@@ -141,7 +140,7 @@ const productsData = [
   {
     id: 11,
     name: "Apron Customized",
-    shop: "Customized Apron",
+    shop: "Shop Customized Apron for home and professional use. Premium quality, washable and stylish apron, perfect as a personalized gift. Order online today!",
     price: 700,
     discount: 10,
     rating: 2,
@@ -153,7 +152,7 @@ const productsData = [
   {
     id: 12,
     name: "Album Invelp VIP Locket ",
-    shop: "Customized Album",
+    shop: "Discover the Album Invelp VIP Locket from Customized Album. Perfect personalized gift, high-quality materials, ideal for photos & memories. Buy online now!",
     price: 1276,
     discount: 10,
     rating: 5,
@@ -162,10 +161,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Album%20Invelp%20VIP%20Locket%20Customized-%201265.jpg?updatedAt=1758437810797",
   },
-   {
+  {
     id: 13,
     name: "Mobile Case ",
-    shop: "Customized case",
+    shop: "Shop Customized Mobile Case. Unique, high-quality phone cover, fully personalized design. Perfect gift for friends and family. Order online today!",
     price: 900,
     discount: 10,
     rating: 5,
@@ -174,10 +173,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Mobile%20Case-900.png?updatedAt=1758438498738",
   },
-    {
+  {
     id: 14,
     name: "Eidi Envelop Customized",
-    shop: "Customized ",
+    shop: "Buy Customized Eidi Envelop. Perfect for gifting money during celebrations, premium quality, fully personalized design. Shop online today! ",
     price: 500,
     discount: 10,
     rating: 5,
@@ -189,8 +188,8 @@ const productsData = [
   {
     id: 15,
     name: "Flag Office Table",
-    shop: "Customized Flag",
-    price: 0.0,
+    shop: "Shop Flag Office Table from Customized Flag. Premium desk accessory for offices, personalized flag stand for meetings & decoration. Order now!",
+    price: 27,
     discount: 10,
     rating: 5,
     color: "White",
@@ -198,10 +197,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Flag%20office%20Table-.png?updatedAt=1758438883256",
   },
-   {
+  {
     id: 16,
     name: "Sigrate Case Box ",
-    shop: "Customized Sigrate",
+    shop: "Buy Customized Sigrate Case Box. High-quality, personalized cigarette holder, perfect for gifting or personal use. Order online today!",
     price: 1300,
     discount: 10,
     rating: 5,
@@ -210,10 +209,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Sigrate%20Case%20Box%20Customized.jpg?updatedAt=1758439163215",
   },
-   {
+  {
     id: 17,
     name: "Temperature Display Coffee Mug ",
-    shop: "Customized",
+    shop: "Shop Temperature Display Coffee Mug from Customized. Smart coffee mug with temperature display, personalized gift, premium quality. Buy online today!",
     price: 1489,
     discount: 10,
     rating: 5,
@@ -222,11 +221,11 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Temprature%20Coffee%20Mug%20Customized%20-1500.png?updatedAt=1758442622257",
   },
-   {
+  {
     id: 19,
-    name: "Mega Power Light Base Acrylic Lamps.",
-    shop: "Customized Lamps",
-    price: 0.0,
+    name: "Mega Power Light Base Acrylic Lamps",
+    shop: "Customized Lamps – Premium acrylic light base, perfect for home decor, office ambiance, and gifting. Stylish, energy-efficient, and fully customizable. Buy online today!",
+    price: 80,
     discount: 10,
     rating: 5,
     color: "White",
@@ -234,10 +233,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Light%20Lamp%20Customized.jpg?updatedAt=1758442956217",
   },
-   {
+  {
     id: 20,
-    name: "PERSONALIZED TREE FRAME ",
-    shop: "Customized Tree Frame",
+    name: "PERSONALIZED TREE FRAME",
+    shop: "Customized Tree Frame – Unique personalized tree frame for home, office, or gifting. Premium quality, elegant design, perfect for photos and memories. Order online now!",
     price: 2000,
     discount: 10,
     rating: 5,
@@ -246,11 +245,11 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Tree%20Frames-2000.jpeg?updatedAt=1758443173160",
   },
-   {
+  {
     id: 21,
     name: "Logo Stamp for Business",
-    shop: "Customized Stamp",
-    price: 0.0,
+    shop: "Customized Stamp – Premium business logo stamp, fully customizable for offices, branding, and personal use. High-quality, durable, and professional. Buy now!",
+    price: 90,
     discount: 10,
     rating: 5,
     color: "White",
@@ -258,10 +257,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Stamp%20Customized-0.0.jpg?updatedAt=1758443351190",
   },
-   {
+  {
     id: 22,
-    name: "Mega Power Light Base Acrylic Lamps.",
-    shop: "Customized Lamps",
+    name: "Mega Power Light Base Acrylic Lamps",
+    shop: "Customized Lamps – Duplicate premium acrylic light base, energy-efficient, stylish home & office decor, perfect as a gift. Fully customizable and durable. Order today!",
     price: 0.0,
     discount: 10,
     rating: 5,
@@ -270,10 +269,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Light%20Lamp%20Customized.jpg?updatedAt=1758442956217",
   },
-   {
+  {
     id: 23,
     name: "Customize Name Bracelet",
-    shop: "More Types",
+    shop: "More Types – Personalized name bracelet, premium quality, perfect as a unique gift. Elegant design, fully customizable, ideal for birthdays, anniversaries, or special occasions. Buy online now!",
     price: 800,
     discount: 10,
     rating: 5,
@@ -282,10 +281,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Bracelet-800.jpeg?updatedAt=1758443885310",
   },
-   {
+  {
     id: 24,
-    name: "Clock Customized ",
-    shop: "More Types",
+    name: "Clock Customized",
+    shop: "More Types – Premium customized clock, ideal for home and office decor. Unique, stylish, fully personalized with high-quality material. Perfect gift option. Order today!",
     price: 1000,
     discount: 10,
     rating: 5,
@@ -294,10 +293,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Customized%20Wooden%20Clock.jpg?updatedAt=1758444125557",
   },
-   {
+  {
     id: 25,
     name: "House Name Plate Customized",
-    shop: "More Types",
+    shop: "More Types – Premium customized house name plate, stylish and durable. Perfect for home entrance decoration, gifting, and personal branding. Fully customizable. Buy now!",
     price: 2500,
     discount: 10,
     rating: 5,
@@ -306,10 +305,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-House%20Name%20Plate%20Customized.jpg?updatedAt=1758444402740",
   },
-     {
+  {
     id: 26,
     name: "Pillow Customized",
-    shop: "More Types",
+    shop: "More Types – Personalized pillow, premium quality, soft and comfortable. Perfect for home decor, gifting, and unique personal touch. Fully customizable. Order online today!",
     price: 500,
     discount: 10,
     rating: 5,
@@ -318,10 +317,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Pillow%20Customized.jpg?updatedAt=1758444524321",
   },
-   {
+  {
     id: 27,
     name: "Printed Glass Shield",
-    shop: "More Types",
+    shop: "More Types – High-quality printed glass shield, perfect for home or office decor. Durable, stylish, and customizable with unique designs. Ideal for gifting. Buy online now!",
     price: 500.00,
     discount: 10,
     rating: 5,
@@ -330,10 +329,11 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Glass%20Shields.png?updatedAt=1758444793845",
   },
+
   {
     id: 28,
     name: "Printed Glass Shield",
-    shop: "More Types",
+    shop: "More Types – Premium printed glass shield, stylish and durable, perfect for home, office, and gifting. High-quality customization with unique designs. Buy online today!",
     price: 500.00,
     discount: 10,
     rating: 5,
@@ -345,7 +345,7 @@ const productsData = [
   {
     id: 29,
     name: "Visiting Card Business",
-    shop: "More Types",
+    shop: "More Types – Customized visiting cards for business and personal branding. Premium quality, professional design, ideal for networking, marketing, and corporate events. Order online now!",
     price: 20,
     discount: 10,
     rating: 5,
@@ -354,10 +354,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Bussiness%20card.jpg?updatedAt=1758445037906",
   },
-    {
+  {
     id: 30,
     name: "Cap VIP DTF Print",
-    shop: "More Types",
+    shop: "More Types – Personalized VIP DTF print caps, high-quality and comfortable. Perfect for promotions, gifts, and fashion statements. Fully customizable. Buy online today!",
     price: 700,
     discount: 10,
     rating: 5,
@@ -368,8 +368,8 @@ const productsData = [
   },
   {
     id: 31,
-    name: "Wadding Dupatta ",
-    shop: "More Types",
+    name: "Wadding Dupatta",
+    shop: "More Types – Premium wadding dupatta, soft and elegant, perfect for weddings, special events, and gifting. High-quality fabric with customizable designs. Order online now!",
     price: 1500,
     discount: 10,
     rating: 5,
@@ -378,10 +378,10 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Wedding%20Dupatta.jpg?updatedAt=1758445292865",
   },
-   {
+  {
     id: 32,
     name: "Ribbon Patti Customized",
-    shop: "More Types",
+    shop: "More Types – Customized ribbon patti, ideal for decorations, gifts, and crafting. High-quality, colorful, and fully personalized. Perfect for events, parties, and home decor. Buy online today!",
     price: 80,
     discount: 10,
     rating: 5,
@@ -402,7 +402,7 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Number%20Plate%20Customized.jpg?updatedAt=1758445668277",
   },
-   {
+  {
     id: 34,
     name: "Puzzle Game Customized",
     shop: "More Types",
@@ -414,7 +414,7 @@ const productsData = [
     stock: true,
     image: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Puzzle%20Game%20Customized.jpg?updatedAt=1758445835091",
   },
-   {
+  {
     id: 33,
     name: "Car Hanger  Customized",
     shop: "More Types",
@@ -777,24 +777,35 @@ const Filter = () => {
                           <h6 className="card-title text-truncate">
                             {product.name}
                           </h6>
-                          <p className="text-muted mb-0">{product.shop}</p>
+                          <p
+                            className="text-muted mb-0"
+                            style={{
+                              display: "-webkit-box",
+                              WebkitLineClamp: 2,
+                              WebkitBoxOrient: "vertical",
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                            }}
+                          >
+                            {product.shop}
+                          </p>
+
                           {/* ⭐ Rating */}
                           <div>
                             {[...Array(5)].map((_, i) => (
                               <i
                                 key={i}
-                                className={`bi ${
-                                  i < product.rating
+                                className={`bi ${i < product.rating
                                     ? "bi-star-fill text-warning"
                                     : "bi-star text-muted"
-                                }`}
+                                  }`}
                               ></i>
                             ))}
                           </div>
                           {/* 💲 Price */}
                           <div className="d-flex justify-content-between align-items-center">
                             <h5 className="text-primary mb-0">
-                              Rs.{discountedPrice.toFixed()} 
+                              Rs.{discountedPrice.toFixed()}
                             </h5>
                             {product.discount > 0 && (
                               <p className="text-decoration-line-through mb-0 text-muted">
@@ -805,13 +816,17 @@ const Filter = () => {
                         </div>
                         <div className="d-flex justify-content-between align-items-center mt-3">
                           <span
-                            className={`badge ${
-                              product.stock ? "bg-success" : "bg-danger"
-                            }`}
+                            className={`badge ${product.stock ? "bg-success" : "bg-danger"
+                              }`}
                           >
                             {product.stock ? "In Stock" : "Out of Stock"}
                           </span>
-                          <Link to="/Checkout" state={{ product }}>
+                          <Link
+                            to={`/checkout/${product.name
+                              .replace(/\s+/g, "-")
+                              .toLowerCase()}`}
+                            state={{ product }}
+                          >
                             <button
                               className="btn btn-dark btn-sm fw-bold"
                               disabled={!product.stock}
@@ -835,9 +850,8 @@ const Filter = () => {
             <nav>
               <ul className="pagination justify-content-center">
                 <li
-                  className={`page-item ${
-                    currentPage === 1 ? "disabled" : ""
-                  }`}
+                  className={`page-item ${currentPage === 1 ? "disabled" : ""
+                    }`}
                 >
                   <button
                     className="page-link"
@@ -849,9 +863,8 @@ const Filter = () => {
                 {[...Array(totalPages)].map((_, index) => (
                   <li
                     key={index}
-                    className={`page-item ${
-                      currentPage === index + 1 ? "active" : ""
-                    }`}
+                    className={`page-item ${currentPage === index + 1 ? "active" : ""
+                      }`}
                   >
                     <button
                       className="page-link"
@@ -862,9 +875,8 @@ const Filter = () => {
                   </li>
                 ))}
                 <li
-                  className={`page-item ${
-                    currentPage === totalPages ? "disabled" : ""
-                  }`}
+                  className={`page-item ${currentPage === totalPages ? "disabled" : ""
+                    }`}
                 >
                   <button
                     className="page-link"

@@ -12,7 +12,7 @@ const CartPage = () => {
   const [discount, setDiscount] = useState(0);
   const [showPayment, setShowPayment] = useState(false); // ✅ Popup state
 
-  const shipping = 7;
+  const shipping = 0;
 
   // ✅ Add product if coming from Checkout
   useEffect(() => {
@@ -187,94 +187,94 @@ const CartPage = () => {
             </div>
 
             {/* Promo Code */}
-          
+
 
             {/* Checkout button */}
-          <div className="d-flex justify-content-center">
-  {/* Checkout button */}
-  <button
-    className="btn w-75 mt-3"
-    style={{
-      fontWeight: "bold",
-      fontSize: "16px",
-      padding: "10px",
-      backgroundColor: "black",
-      color: "white",
-      borderRadius: "8px",
-    }}
-    onClick={() => {
-      const orderDetails = cart
-        .map(
-          (item) =>
-            `• ${item.name} x${item.quantity} = Rs.${(
-              item.price * item.quantity
-            ).toFixed()}`
-        )
-        .join("%0A"); // WhatsApp line break
+            <div className="d-flex justify-content-center">
+              {/* Checkout button */}
+              <button
+                className="btn w-75 mt-3"
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "16px",
+                  padding: "10px",
+                  backgroundColor: "black",
+                  color: "white",
+                  borderRadius: "8px",
+                }}
+                onClick={() => {
+                  const orderDetails = cart
+                    .map(
+                      (item) =>
+                        `• ${item.name} x${item.quantity} = Rs.${(
+                          item.price * item.quantity
+                        ).toFixed()}`
+                    )
+                    .join("%0A"); // WhatsApp line break
 
-      const message = `Hello, I want to confirm my order:%0A${orderDetails}%0A%0ATotal: Rs.${total.toFixed()}`;
+                  const message = `Hello, I want to confirm my order:%0A${orderDetails}%0A%0ATotal: Rs.${total.toFixed()}`;
 
-      window.open(
-        `https://wa.me/923019854185?text=${message}`,
-        "_blank"
-      );
-    }}
-  >
-     PLACE ORDER ON WHATSAPP
-  </button>
-</div>
+                  window.open(
+                    `https://wa.me/923019854185?text=${message}`,
+                    "_blank"
+                  );
+                }}
+              >
+                PLACE ORDER ON WHATSAPP
+              </button>
+            </div>
 
           </div>
         </div>
       </div>
 
-     {/* ✅ Payment Popup Modal */}
-{showPayment && (
-  <div
-    className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
-    style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
-  >
-    <div className="bg-white p-4 rounded shadow" style={{ width: "400px" }}>
-      <h5 className="fw-bold mb-3">💳 Select Payment Method</h5>
-      <ul className="list-group mb-3">
-        <li className="list-group-item">
-          <b>EasyPaisa</b> <br />
-          Account: <span className="text-success">0300-1234567</span>
-        </li>
-        <li className="list-group-item">
-          <b>JazzCash</b> <br />
-          Account: <span className="text-success">0301-9876543</span>
-        </li>
-        <li className="list-group-item">
-          <b>Meezan Bank</b> <br />
-          IBAN: <span className="text-success">PK90MEZN0000123456789</span>
-        </li>
-      </ul>
+      {/* ✅ Payment Popup Modal */}
+      {showPayment && (
+        <div
+          className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+        >
+          <div className="bg-white p-4 rounded shadow" style={{ width: "400px" }}>
+            <h5 className="fw-bold mb-3">💳 Select Payment Method</h5>
+            <ul className="list-group mb-3">
+              <li className="list-group-item">
+                <b>EasyPaisa</b> <br />
+                Account: <span className="text-success">0300-1234567</span>
+              </li>
+              <li className="list-group-item">
+                <b>JazzCash</b> <br />
+                Account: <span className="text-success">0301-9876543</span>
+              </li>
+              <li className="list-group-item">
+                <b>Meezan Bank</b> <br />
+                IBAN: <span className="text-success">PK90MEZN0000123456789</span>
+              </li>
+            </ul>
 
-      {/* ✅ Dynamic message after confirm */}
-      {showPayment === "confirmed" && (
-        <p className="text-success fw-bold mt-2" style={{ fontSize: "14px" }}>
-          ✅ Please share the screenshot of your payment method to verify the payment and confirm your product order.
-        </p>
+            {/* ✅ Dynamic message after confirm */}
+            {showPayment === "confirmed" && (
+              <p className="text-success fw-bold mt-2" style={{ fontSize: "14px" }}>
+                ✅ Please share the screenshot of your payment method to verify the payment and confirm your product order.
+              </p>
+            )}
+
+            <div className="d-flex justify-content-end">
+              <button
+                className="btn btn-secondary me-2"
+                onClick={() => setShowPayment(false)}
+              >
+                Close
+              </button>
+              <button
+                className="btn btn-success"
+                onClick={() => setShowPayment("confirmed")} // 👈 Change state
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
       )}
-
-      <div className="d-flex justify-content-end">
-        <button
-          className="btn btn-secondary me-2"
-          onClick={() => setShowPayment(false)}
-        >
-          Close
-        </button>
-        <button
-          className="btn btn-success"
-          onClick={() => setShowPayment("confirmed")} // 👈 Change state
-        >
-          Confirm
-        </button>
-      </div>
-    </div>
-  </div>
-)}
 
     </div>
   );

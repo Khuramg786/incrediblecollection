@@ -215,13 +215,13 @@ export default function Navbar() {
               </li>
 
               <li className="nav-item px-3">
-                <Link className="nav-link text-white fs-5" to="/Filter">
+                <Link className="nav-link text-white fs-5" to="/Contactus">
                   Contact Us
                 </Link>
               </li>
 
               <li className="nav-item px-3">
-                <Link className="nav-link text-white fs-5" to="/Filter">
+                <Link className="nav-link text-white fs-5" to="/Blog">
                   Blog
                 </Link>
               </li>

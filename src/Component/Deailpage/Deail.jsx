@@ -12,7 +12,7 @@ const Deail = () => {
       rating: 5,
       stock: 323,
       image:
-        "https://dukaan.b-cdn.net/700x700/webp/media/ad31ee9b-a372-49c0-9c75-fa38714b4587.jpg",
+        "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-New%20metal%20boday%20model%20car.jpg?updatedAt=1758751376003",
       button: "ADD TO CART",
     },
     {
@@ -24,7 +24,7 @@ const Deail = () => {
       rating: 3,
       stock: 122,
       image:
-        "https://sc04.alicdn.com/kf/H8d669624b2e3483d8faf297cce4d3085K.jpg",
+        "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Promotional%20fashion%20sale%20cap%20set.avif?updatedAt=1758751472854",
       button: "ADD TO CART",
     },
     {
@@ -36,7 +36,7 @@ const Deail = () => {
       rating: 5,
       stock: 124,
       image:
-        "https://m.media-amazon.com/images/I/71gi11m8qHL._SL1500_.jpg",
+        "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Full%20makeup%20kit.jpg?updatedAt=1758751533091",
       button: "ADD TO CART",
     },
   ];

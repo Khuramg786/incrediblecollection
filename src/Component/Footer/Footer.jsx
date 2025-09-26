@@ -1,33 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const Footer =()=>{
     return(
         <>
          <footer className=" text-white text-center p-4 mt-5" style={{ background: "linear-gradient(to left, #c9930f, rgba(201,147,15,0))" }}>
       {/* Top Menu */}
       <div className="mb-3 fw-bold">
-        <a href="#" className="text-white text-decoration-none mx-2">
+        <Link to="/" className="text-white text-decoration-none mx-2">
           HOME
-        </a>
+        </Link>
         |
-        <a href="#" className="text-white text-decoration-none mx-2">
+        <Link to="/Contactus" className="text-white text-decoration-none mx-2">
           CONTACT US
-        </a>
+        </Link>
         |
-        <a href="#" className="text-white text-decoration-none mx-2">
+        <Link to="/Filter" className="text-white text-decoration-none mx-2">
           Products
-        </a>
+        </Link>
         |
-        <a href="#" className="text-white text-decoration-none mx-2">
-         Accessories
-        </a>
+        <Link to="/Filter" className="text-white text-decoration-none mx-2">
+          Accessories
+        </Link>
         |
-        <a href="#" className="text-white text-decoration-none mx-2">
-          New products
-        </a>
+        <Link to="/Filter" className="text-white text-decoration-none mx-2">
+          New Products
+        </Link>
         |
-        <a href="#" className="text-white text-decoration-none mx-2">
+        <Link to="/Blog" className="text-white text-decoration-none mx-2">
           Terms and conditions of use
-        </a>
+        </Link>
       </div>
 
         <div className="row text-center text-md-start align-items-center">

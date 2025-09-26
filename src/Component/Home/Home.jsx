@@ -9,31 +9,31 @@ import "./Home.css";
 const Home = () => {
   const shopbycategory = [
     {
-      img: "https://photos3.walmart.com/prism/themes/wmceramicmugs-21.themepack/wmt_weloveyoudad_7x3_11oz_bluehandle.mug/_hd_product_01.jpg", 
-      title: "Cup Print",
+      img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-MUG.jpg?updatedAt=1758748953499", 
+      title: "MUG Print",
       countity: "(14 items)"
     },
     {
-      img: "https://3.imimg.com/data3/XK/CJ/MY-3357813/2-500x500.jpg",
+      img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Shirt.jpg?updatedAt=1758749400477",
       title: "Shirts Printer",
       countity: "(20 items)"
     },
     {
-      img: "https://m.media-amazon.com/images/I/415Y2EKHxWL._AC_.jpg",
+      img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Laptop%20Cover.jpg?updatedAt=1758749284098",
       title: "Laptop Sticker",
       countity: "(21 items)"
     },
      {
-      img: "https://bsg-i.nbxc.com/product/0a/c2/a4/2cb9227c4d0f35a67c62048043.jpg@4e_500w_500h.src%7C95Q.webp",
+      img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-phone%20cover%20.png?updatedAt=1758749550916",
       title: "Phone Sticker",
       countity: "(20 items)"
     },
     {
-      img: "https://m.media-amazon.com/images/I/81byuBO9qmL._UF1000,1000_QL80_.jpg",
+      img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Die%20cast%20car.jpg?updatedAt=1758749637928",
       title: "Diecast Car Metal",
       countity: "(18 items)"
     },{
-      img: "https://m.media-amazon.com/images/I/813rDc56ZRL._UF1000,1000_QL80_.jpg",
+      img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-smart%20watches.jpg?updatedAt=1758749695177",
       title: "Smart Watches",
       countity: "(13 items)"
     },{
@@ -42,15 +42,15 @@ const Home = () => {
       countity: "(11 items)"
     },
     {
-      img: "https://m.media-amazon.com/images/I/71AEbODrs9L._SL1500_.jpg",
+      img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-makeup%20brush.jpg?updatedAt=1758749848208",
       title: "Makeup Brush",
       countity: "(13 items)"
     },{
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZvOSTztPqHKysjg5oRDJ3v8cQDpmtRyz00w&s",
+      img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-makup%20spon.jpeg?updatedAt=1758750052825",
       title: "Makeup Sponge ",
       countity: "(12 items)"
     },{
-      img: "https://www.dturman.com/cdn/shop/files/photo1691770537_15_-PhotoRoom.jpg?v=1756302978&width=1946", 
+      img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Die-car%20metal.jpg?updatedAt=1758750149289", 
       title: "Diecast Car",
       countity: "(14 items)"
     }
@@ -79,58 +79,55 @@ const Home = () => {
   const secondproducts = [
   {
     id: 1,
-    shop: "Proper Brand Design Is Important",
+    name: "Proper Brand Design Is Important",
     price: 0.0,
     discount: "-$00.00",
     rating: 5,
      stock: true, // ✅ In Stock
-    img: "https://cobranded.com.au/wp-content/uploads/2024/07/promotional-products-sydney.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-printing%20prodcut.jpg?updatedAt=1758750352594",
   },
   {
     id: 2,
-    shop: "Laptop & Keyboard Stickers Model Persian",
+    name: "Laptop & Keyboard Stickers Model Persian",
     price: 0.0,
     oldPrice: 24,
     discount: "-8%",
     rating: 3,
      stock: true, // ✅ In Stock
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQukzTKQ7iLSCw5rp1_98W50pecBJp4Y2IvWaF4RTeDHBaGlVGn2p_BxwEY_IvlAVWbvzo&usqp=CAU",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-laptop%20cover%20best.jpeg?updatedAt=1758750404368",
   },
   {
     id: 3,
-    shop: "Iphone Skin Sticker & Iron On Patch ",
+    name: "Iphone Skin Sticker & Iron On Patch ",
    price: 0.0,
     rating: 4,
      stock: true, // ✅ In Stock
-    img: "https://ae-pic-a1.aliexpress-media.com/kf/Ha4c74b4fe6b04884b83ae0a077073cfc0/YCSTICKER-Luxury-Protective-3M-Vinyl-Skin-Decal-Wrap-Film-Premium-Ultra-Slim-Cover-Back-Sticker-3D.jpg_640x640Q90.jpg_.webp",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-mobile%20cover.avif?updatedAt=1758750464741",
   },
   {
     id: 4,
-    shop: " Wooden Dairy  Personalized Photo "  ,
-    // name: "Noise ColorFit Ultra 3 Bluetooth Calling Smartwatch",
+    name: " Wooden Dairy  Personalized Photo "  ,
  price: 5.28,
     rating: 4,
      stock: true, // ✅ In Stock
-    img: "https://i.etsystatic.com/24564691/r/il/86f6fb/3119327852/il_570xN.3119327852_5g14.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-wooden%20dairy.webp?updatedAt=1758750516279",
   },
   {
     id: 5,
-    shop: "Rolex crown bracelet new arrivals",
-    name: "LG 8 kg Fully Automatic Top Load Washing Machine",
+    name: "Rolex crown bracelet new arrivals",
     price: 0.0,
     rating: 5,
      stock: true, // ✅ In Stock
-    img: "https://digidukaan.s3.ap-south-1.amazonaws.com/113294346481790094.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-braslit.jpg?updatedAt=1758750571478",
   },
   {
     id: 6,
-    shop: "High Quality Printing Services ",
-    // name: "iPhone 13, 128GB, Pink - Unlocked Premium",
+    name: "High Quality Printing Services ",
     price: 0.0,
     discount: "-$6.00",
     rating: 3,
      stock: true, // ✅ In Stock
-    img: "https://addhouse.ae/wp-content/uploads/2024/04/website-banner-1.webp",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-priting%20prodcuts.webp?updatedAt=1758750644753",
   },
 ];
    const features = [
@@ -160,116 +157,112 @@ const Home = () => {
       subtitle: "Contact us Anytime",
     },
   ];
-   const thirdroducts = [
+ const thirdroducts = [
   {
     id: 1,
-    shop: "Diecast 1/24 Scale Cars",
+    name: "Diecast 1/24 Scale Cars",
     price: 0.0,
     discount: "-$5.00",
     rating: 5,
      stock: true, // ✅ In Stock
-    img: "https://dukaan.b-cdn.net/700x700/webp/media/ad31ee9b-a372-49c0-9c75-fa38714b4587.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-1-Dicast-car.webp?updatedAt=1758750698723",
   },
   {
     id: 2,
-    shop: "Die-cast Metal",
+    name: "Die-cast Metal",
     price: 0.0,
     oldPrice: 24,
     discount: "-8%",
     rating: 3,
      stock: true, // ✅ In Stock
-    img: "https://m.media-amazon.com/images/I/71OvY43aCtL.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-2-Dicast-car.webp?updatedAt=1758750779525",
   },
   {
     id: 3,
-    shop: "KIDAMI Die Cast Metal ",
+    name: "KIDAMI Die Cast Metal ",
     price: 0.0,
     rating: 4,
      stock: true, // ✅ In Stock
-    img: "https://images-na.ssl-images-amazon.com/images/I/81aY8FT25lL.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-KIDAMI%20Die%20Cast%20Metal.jpg?updatedAt=1758750841663",
   },
   {
     id: 4,
-    shop: "Jada 2012 Diecast Car",
-    name: "Noise ColorFit Ultra 3 Bluetooth Calling Smartwatch",
+    name: "Jada 2012 Diecast Car",
     price: 0.0,
     rating: 4,
      stock: true, // ✅ In Stock
-    img: "https://i.ebayimg.com/images/g/9XwAAOSwFLNnLZmp/s-l1200.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Jada%202012%20Diecast%20Car.jpg?updatedAt=1758750907479",
   },
   {
     id: 5,
-    shop: "BDTCTK Off-Road  Diecast",
-    name: "LG 8 kg Fully Automatic Top Load Washing Machine",
+    name: "BDTCTK Off-Road  Diecast",
     price: 0.0,
     rating: 5,
      stock: true, // ✅ In Stock
-    img: "https://m.media-amazon.com/images/I/71sisLAniwL._UF1000,1000_QL80_.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-BDTCTK%20Off-Road%20%20Diecast.jpg?updatedAt=1758750969933",
   },
   {
     id: 6,
-    shop: "Apple iphone 13",
-    name: "iPhone 13, 128GB, Pink - Unlocked Premium",
+    name: "Best Die-cast car",
     price: 0.0,
     discount: "-$6.00",
     rating: 3,
      stock: false, // ✅ In Stock
-    img: "https://m.media-amazon.com/images/I/61AEjPn60rL._UF1000,1000_QL80_.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-last.jpg?updatedAt=1758751053068",
   },
 ];
    const fourthdroducts = [
   {
     id: 1,
-    shop: " Big Size Makeup Brushes",
+    name: " Big Size Makeup Brushes",
     price: 0.0,
     discount: "-$5.00",
     rating: 2,
      stock: true, // ✅ In Stock
-    img: "https://ae01.alicdn.com/kf/Sb602d421d6c8495296c163b5ee809d74h.jpg_640x640q90.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-1pcs%20Big%20size%20makeup%20brushes.webp?updatedAt=1758751817122",
   },
   {
     id: 2,
-    shop: "Silicone Face Mask Brush ",
+    name: "Silicone Face Mask Brush ",
     price: 0.0,
     oldPrice: 24,
     discount: "-8%",
     rating: 3,
      stock: true, // ✅ In Stock
-    img: "https://img4.dhresource.com/webp/m/0x0/f3/albu/km/j/09/dd4c0869-8510-4ec2-bde1-5c157d7d26c0.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Silicone%20face%20bask%20brush%20for%20smooth%20skin.jpg?updatedAt=1758751896623",
   },
   {
     id: 3,
-    shop: "20Pcs Makeup Brushes ",
+    name: "20Pcs Makeup Brushes ",
     price: 225,
     rating: 5,
      stock: true, // ✅ In Stock
-    img: "https://glamwarehouse.com.au/cdn/shop/files/S79c3c16078014f90bb83a2c69d2e2e1bz.webp?v=1713152307&width=1946",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-%20best%20bursh.webp?updatedAt=1758751947528",
   },
   {
     id: 4,
-    shop: " Sparkling Makeup Brush",
+    name: " Sparkling Makeup Brush",
     price: 0.0,
     rating: 4,
      stock: true, // ✅ In Stock
-    img: "https://m.media-amazon.com/images/I/71gDLsBlp2S._SL1500_.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-%20Sparkling%20Makeup%20Brush.jpg?updatedAt=1758751999027",
   },
   {
     id: 5,
-    shop: "Makeup Brush Set Black Cone",
+    name: "Makeup Brush Set Black Cone",
     price: 0.0,
     rating: 2,
      stock: true, // ✅ In Stock
-    img: "https://images-na.ssl-images-amazon.com/images/I/41hWg5AV6lL.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Makeup%20Brush%20Set%20Black%20Cone.jpg?updatedAt=1758752055577",
   },
   {
     id: 6,
-    shop: "MODA  Full Face 13-Piece",
-    name: "iPhone 13, 128GB, Pink - Unlocked Premium",
+    name: "MODA  Full Face 13-Piece",
     price: 194,
     discount: "-$6.00",
     rating: 3,
      stock: false, // ✅ In Stock
-    img: "https://images-na.ssl-images-amazon.com/images/I/71GsZ1+GUuL._AC_UL600_SR600,600_.jpg",
+    img: "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-MODA%20%20Full%20Face%2013-Piece.jpg?updatedAt=1758752129406",
   },
 ];
 const chunkArray = (arr, size) =>
@@ -398,7 +391,7 @@ const chunkArray = (arr, size) =>
         />
 
         <div className="card-body text-center">
-          <h6 className="text-muted">{product.shop}</h6>
+          <h6 className="text-muted">{product.name}</h6>
 
           {/* ⭐ Rating */}
           <div className="mb-2">
@@ -425,14 +418,19 @@ const chunkArray = (arr, size) =>
               ${product.price.toFixed(2)}
             </h6>
 
-            <Link to="/Checkout" state={{ product }}>
-              <button
-                className="btn btn-dark btn-sm fw-bold"
-                disabled={!product.stock}
-              >
-                Order Now
-              </button>
-            </Link>
+            <Link
+                    to={`/checkout/${product.name
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
+                    state={{ product }}
+                  >
+                    <button
+                      className="btn btn-dark btn-sm fw-bold"
+                      disabled={!product.stock}
+                    >
+                      Order Now
+                    </button>
+                  </Link>
           </div>
         </div>
       </div>
@@ -482,7 +480,7 @@ const chunkArray = (arr, size) =>
         />
 
         <div className="card-body text-center">
-          <h6 className="text-muted">{product.shop}</h6>
+          <h6 className="text-muted">{product.name}</h6>
 
           {/* ⭐ Rating */}
           <div className="mb-2">
@@ -509,14 +507,19 @@ const chunkArray = (arr, size) =>
               ${product.price.toFixed(2)}
             </h6>
 
-            <Link to="/Checkout" state={{ product }}>
-              <button
-                className="btn btn-dark btn-sm fw-bold"
-                disabled={!product.stock}
-              >
-                Order Now
-              </button>
-            </Link>
+            <Link
+                    to={`/checkout/${product.name
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
+                    state={{ product }}
+                  >
+                    <button
+                      className="btn btn-dark btn-sm fw-bold"
+                      disabled={!product.stock}
+                    >
+                      Order Now
+                    </button>
+                  </Link>
           </div>
         </div>
       </div>
@@ -535,8 +538,8 @@ const chunkArray = (arr, size) =>
       >
         {/* Image */}
         <img
-          src="https://m.media-amazon.com/images/I/51Xu56nJr4L._UF1000,1000_QL80_.jpg"
-          alt="Controller"
+          src="https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Popular%20Bursh.jpg?updatedAt=1758752241812"
+          alt="Popular Bursh "
           className="img-fluid rounded mb-3 mb-sm-0 me-sm-3"
           style={{
             maxWidth: "45%",
@@ -568,7 +571,7 @@ const chunkArray = (arr, size) =>
       >
         {/* Image */}
         <img
-          src="https://colortrack.ae/wp-content/uploads/2020/02/gift.png"
+          src="https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-%20GIFT%20&%20PROMOTIONAL%20ITEMS%20PRINTING.png?updatedAt=1758752321739"
           alt="Gift Items"
           className="img-fluid rounded mb-3 mb-sm-0 me-sm-3"
           style={{
@@ -596,93 +599,99 @@ const chunkArray = (arr, size) =>
 </div>
 
 {/* ----------------------------------------Diecast Car---------------- */}
-<div className="mx-4 my-4">
+ <div className="mx-4 my-4">
+      {/* ----------------------------------------Diecast Car---------------- */}
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h3 className="fw-bold mb-4">Diecast Car Products</h3>
-       <hr className="border-primary border-2 w-50" />
+        <hr className="border-primary border-2 w-50" />
         <a href="#" className="text-decoration-none fw-bold small">
           ALL NEW PRODUCTS
         </a>
       </div>
-<div className="row g-3">
-  {thirdroducts.map((product) => (
-    <div className="col-md-4 col-lg-2" key={product.id}>
-      <div
-        className="card h-100 shadow-sm overflow-hidden"
-        style={{
-          height: "350px", // fixed card height
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
-        {product.discount && (
-          <span className="badge bg-danger position-absolute m-2">
-            {product.discount}
-          </span>
-        )}
 
-        <img
-          src={product.img}
-          className="card-img-top p-3"
-          alt={product.name}
-          style={{
-            height: "160px", // fixed image height
-            objectFit: "contain", // keeps aspect ratio (no stretch)
-          }}
-        />
+      <div className="row g-3">
+        {thirdroducts.map((product) => (
+          <div className="col-md-4 col-lg-2" key={product.id}>
+            <div
+              className="card h-100 shadow-sm overflow-hidden"
+              style={{
+                height: "350px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              {product.discount && (
+                <span className="badge bg-danger position-absolute m-2">
+                  {product.discount}
+                </span>
+              )}
 
-        <div
-          className="card-body text-center"
-          style={{ flex: "1 1 auto", overflow: "hidden" }}
-        >
-          <h6 className="text-muted">{product.shop}</h6>
+              <img
+                src={product.img}
+                className="card-img-top p-3"
+                alt={product.name}
+                style={{
+                  height: "160px",
+                  objectFit: "contain",
+                }}
+              />
 
-          {/* ⭐ Rating */}
-          <div className="mb-2">
-            {[...Array(5)].map((_, i) => (
-              <i
-                key={i}
-                className={`bi ${
-                  i < product.rating
-                    ? "bi-star-fill text-warning"
-                    : "bi-star text-muted"
-                }`}
-              ></i>
-            ))}
-          </div>
-
-          {/* ✅ Stock Status Badge */}
-          <span
-            className={`badge ${product.stock ? "bg-success" : "bg-danger"}`}
-          >
-            {product.stock ? "In Stock" : "Out of Stock"}
-          </span>
-
-          {/* Price + Order Now */}
-          <div className="d-flex justify-content-between align-items-center mt-2">
-            <h6 className="fw-bold text-black mb-0">
-              ${product.price.toFixed(2)}
-            </h6>
-
-            <Link to="/Checkout" state={{ product }}>
-              <button
-                className="btn btn-dark btn-sm fw-bold"
-                disabled={!product.stock}
+              <div
+                className="card-body text-center"
+                style={{ flex: "1 1 auto", overflow: "hidden" }}
               >
-                Order Now
-              </button>
-            </Link>
+                <h6 className="text-muted">{product.name}</h6>
+
+                {/* ⭐ Rating */}
+                <div className="mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <i
+                      key={i}
+                      className={`bi ${
+                        i < product.rating
+                          ? "bi-star-fill text-warning"
+                          : "bi-star text-muted"
+                      }`}
+                    ></i>
+                  ))}
+                </div>
+
+                {/* ✅ Stock Status Badge */}
+                <span
+                  className={`badge ${
+                    product.stock ? "bg-success" : "bg-danger"
+                  }`}
+                >
+                  {product.stock ? "In Stock" : "Out of Stock"}
+                </span>
+
+                {/* Price + Order Now */}
+                <div className="d-flex justify-content-between align-items-center mt-2">
+                  <h6 className="fw-bold text-black mb-0">
+                    ${product.price.toFixed(2)}
+                  </h6>
+
+                  {/* ✅ Dynamic URL with slug */}
+                  <Link
+                    to={`/checkout/${product.name
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
+                    state={{ product }}
+                  >
+                    <button
+                      className="btn btn-dark btn-sm fw-bold"
+                      disabled={!product.stock}
+                    >
+                      Order Now
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
-
-
-
-
     </div>
 <Deail/>
     </div>

@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import ErrorPage from './Component/Error/Errorpage.jsx'
 import './index.css'
 import App from './App.jsx'
 import Layout from './Component/layout.jsx'
@@ -9,12 +10,15 @@ import Checkout from './Component/Checkout/Checkout.jsx'
 import Filter from './Component/Filter/Filter.jsx'
 import CartPage from './Component/Addtocard/Addcard.jsx'
 import Testing from './Component/Testing/Testing.jsx'
+import Contactus from './Component/Contactus/Contact.jsx'
+import Blog from './Component/Blogs/Blogs.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
+      errorElement: <ErrorPage />,   // ✅ custom error page
     children: [
     {
     path: '/',
@@ -24,17 +28,26 @@ const router = createBrowserRouter([
         path: '/Filter',
         element: <Filter />,
       },
-      {
-        path: '/Checkout',
-        element: <Checkout />,
-      },
+    {
+  path: '/checkout/:productName',   // ✅ Dynamic Route
+  element: <Checkout />,
+}
+,
  {
-        path: '/CartPage',
+        path: '/CartPage/:productName',
         element: <CartPage />,
       },
       {
         path: '/Testing',
         element: <Testing />,
+      },
+        {
+        path: '/Contactus',
+        element: <Contactus />,
+      },
+      {
+        path: '/Blog',
+        element: <Blog />,
       },
     ],
   },

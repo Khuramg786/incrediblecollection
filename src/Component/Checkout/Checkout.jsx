@@ -44,9 +44,8 @@ const Checkout = () => {
                   key={index}
                   src={img}
                   alt={`Thumb ${index + 1}`}
-                  className={`img-thumbnail p-1 ${
-                    selectedImage === img ? "border border-2 border-success" : ""
-                  }`}
+                  className={`img-thumbnail p-1 ${selectedImage === img ? "border border-2 border-success" : ""
+                    }`}
                   style={{ cursor: "pointer", height: "70px", width: "70px", objectFit: "contain" }}
                   onClick={() => setSelectedImage(img)}
                 />
@@ -104,31 +103,37 @@ const Checkout = () => {
             </div>
 
             {/* Buttons */}
-           <div className="d-flex gap-2 mt-4 flex-wrap">
-  {/* 🛒 Proceed to Pay */}
-  <button
-    className="btn btn-success fw-bold w-50 text-truncate"
-    style={{ fontSize: "clamp(12px, 2vw, 18px)" }}
-    onClick={() => navigate("/CartPage", { state: { product } })}
-  >
-    <i className="bi bi-cart-check-fill me-2"></i> Proceed to Pay
-  </button>
-
-  {/* ⬅ Continue Shopping */}
-  <button
-    className="btn btn-outline-secondary fw-bold w-50 text-truncate"
-    style={{ fontSize: "clamp(12px, 2vw, 18px)" }}
-    onClick={() => navigate("/")}
-  >
-    <i className="bi bi-arrow-left me-2"></i> Continue Shopping
-  </button>
-</div>
+            <div className="d-flex gap-2 mt-4 flex-wrap">
+              {/* 🛒 Proceed to Pay */}
+              <button
+                className="btn btn-success fw-bold w-50 text-truncate"
+                style={{ fontSize: "clamp(12px, 2vw, 18px)" }}
+                onClick={() =>
+                  navigate(
+                    `/cartpage/${product.name.replace(/\s+/g, "-").toLowerCase()}`,
+                    { state: { product } }
+                  )
+                }
+              >
+                <i className="bi bi-cart-check-fill me-2"></i> Proceed to Checkout
+              </button>
 
 
-            
-<p className="mt-4 small text-muted">
-  <FaLock className="me-2" /> 100% Safe Payment | <FaTruck className="ms-2 me-2" /> Fast Delivery
-</p>
+              {/* ⬅ Continue Shopping */}
+              <button
+                className="btn btn-outline-secondary fw-bold w-50 text-truncate"
+                style={{ fontSize: "clamp(12px, 2vw, 18px)" }}
+                onClick={() => navigate("/")}
+              >
+                <i className="bi bi-arrow-left me-2"></i> Continue Shopping
+              </button>
+            </div>
+
+
+
+            <p className="mt-4 small text-muted">
+              <FaLock className="me-2" /> 100% Safe Payment | <FaTruck className="ms-2 me-2" /> Fast Delivery
+            </p>
           </div>
         </div>
       </div>
