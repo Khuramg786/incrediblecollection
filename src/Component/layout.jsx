@@ -15,26 +15,27 @@ export default function Layout() {
     return () => clearTimeout(timer);
   }, []);
 
-  const products = [
-    {
-      id: 1,
-      title: "Custom Printing Solutions",
-      img: "https://sc04.alicdn.com/kf/H8d669624b2e3483d8faf297cce4d3085K.jpg",
-      discount: "70% OFF",
-    },
-    {
-      id: 2,
-      title: "Classic Diecast Car Collection",
-      img: "https://images-na.ssl-images-amazon.com/images/I/81aY8FT25lL.jpg",
-      discount: "70% OFF",
-    },
-    {
-      id: 3,
-      title: "Best Makeup Brushes",
-      img: "https://m.media-amazon.com/images/I/51Xu56nJr4L._UF1000,1000_QL80_.jpg",
-      discount: "50% OFF",
-    },
-  ];
+ const products = [
+  {
+    id: 1,
+    title: "Customized Wooden Printing",
+    img: "https://sc04.alicdn.com/kf/H8d669624b2e3483d8faf297cce4d3085K.jpg",
+    discount: "70% OFF",
+  },
+  {
+    id: 2,
+    title: "Personalized Photo Printing",
+    img: "https://photos3.walmart.com/prism/themes/wmfullphoto-2.themepack/collage_7x3_11oz_whitecollage.mug/_hd_product_01.jpg",
+    discount: "60% OFF",
+  },
+  {
+    id: 3,
+    title: "Custom Gift Printing",
+    img: "https://www.safaprinters.com/wp-content/uploads/2021/07/Gift-Boxes.jpg",
+    discount: "50% OFF",
+  },
+];
+
 
   return (
     <div>
