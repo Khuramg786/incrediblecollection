@@ -28,12 +28,17 @@ const router = createBrowserRouter([
         path: '/Filter',
         element: <Filter />,
       },
+       
     {
   path: '/checkout/:productName',   // ✅ Dynamic Route
   element: <Checkout />,
 }
 ,
  {
+        path: '/CartPage/:productName',
+        element: <CartPage />,
+      },
+      {
         path: '/CartPage/:productName',
         element: <CartPage />,
       },

@@ -138,20 +138,18 @@ export default function Navbar() {
                         Phone Sticker
                       </Link>
                       <Link className="dropdown-item" to="/Filter">
-                        Diecast Car Metal
+                        MUG Print
                       </Link>
                       <Link className="dropdown-item" to="/Filter">
-                        Smart Watches
+                        TREE FRAME
                       </Link>
                       <Link className="dropdown-item" to="/Filter">
-                        Makeup Brush
+                       Glass Shield
                       </Link>
                       <Link className="dropdown-item" to="/Filter">
-                        Makeup Sponge
+                       Cap VIP Print
                       </Link>
-                      <Link className="dropdown-item" to="/Filter">
-                        Diecast Car
-                      </Link>
+                     
                     </div>
                   </div>
                 </div>
@@ -180,8 +178,8 @@ export default function Navbar() {
                   data-bs-toggle="dropdown"
                   href="#"
                 >
-                  <span className="badge bg-danger">SALE</span> &nbsp;Products
-                  Print<i className="bi bi-chevron-down ms-1 drop"></i>
+                  <span className="badge bg-danger">SALE</span> &nbsp; Customized Products
+                  <i className="bi bi-chevron-down ms-1 drop"></i>
                 </a>
                 {/* Dynamic Dropdown using map */}
                 <div className="dropdown-menu w-100 mt-0 p-4 shadow-lg">
@@ -202,14 +200,13 @@ export default function Navbar() {
 
               <li className="nav-item px-3">
                 <Link className="nav-link text-white fs-5" to="/Filter">
-                  <span className="badge bg-warning text-dark">HOT</span> Makeup
-                  Brush <i className="bi bi-chevron-down ms-1 drop"></i>
+                  <span className="badge bg-warning text-dark"></span> Modern Printing<i className="bi bi-chevron-down ms-1 drop"></i>
                 </Link>
               </li>
 
               <li className="nav-item px-3">
                 <Link className="nav-link text-white fs-5" to="/Filter">
-                  <span className="badge bg-success">NEW</span> Diecast Car{" "}
+                  <span className="badge bg-success">NEW</span > Wooden Products{" "}
                   <i className="bi bi-chevron-down ms-1 drop"></i>
                 </Link>
               </li>

@@ -505,7 +505,7 @@ const Filter = () => {
       <div className="row">
         {/* Sidebar Filters */}
         <div
-          className="col-md-3 p-3 d-flex flex-column mb-3"
+          className="col-md-3 p-3 d-none d-md-flex flex-column mb-3"
           style={{
             background: "linear-gradient(145deg, #ffffff, #f3f3f3)",
             borderRadius: "15px",
@@ -682,213 +682,197 @@ const Filter = () => {
               </div>
             )}
           </div>
+            <img src="https://s.alicdn.com/@sc04/kf/H898b956d56f74439919b57f340b58176h.jpg" alt="Customized Printing Product"/><br/>
+      <img src="https://image.rolanddg.com/-/media/roland-apac/das/images/industry/promotional-products/printonbottles.jpg?rev=4b7248da69844493a1049eb2980fbb74&la=en&h=533&w=800&hash=3DEB40B9D48B91116BEF12A7EE6DDF49" alt="Customized Printing Product"/>
+
         </div>
 
         {/* Product List */}
-        <div className="col-md-9">
-          <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3">
-            <h5>{sortedProducts.length} Products</h5>
+        {/* Product List */}
+<div className="col-12 col-md-9">
+  <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-3">
+    <h5 className="mb-3 mb-md-0">{sortedProducts.length} Products</h5>
 
-            {/* 🔍 Search Bar */}
-            <div className="row mb-3 w-50">
-              <div className="col-12 d-flex justify-content-center">
-                <div
-                  className="input-group w-100"
-                  style={{
-                    maxWidth: "700px",
-                  }}
-                >
-                  <span
-                    className="input-group-text"
+    {/* 🔍 Search Bar */}
+    <div className="row mb-3 w-100 w-md-50">
+      <div className="col-12 d-flex justify-content-center">
+        <div
+          className="input-group w-100"
+          style={{ maxWidth: "700px" }}
+        >
+          <span
+            className="input-group-text"
+            style={{
+              borderRadius: "30px 0 0 30px",
+              backgroundColor: "#fff",
+              borderRight: "none",
+              padding: "12px 18px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+            }}
+          >
+            <i className="bi bi-search fs-5"></i>
+          </span>
+
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Search products..."
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              setCurrentPage(1);
+            }}
+            style={{
+              borderRadius: "0 30px 30px 0",
+              padding: "12px 10px",
+              fontSize: "1rem",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+            }}
+          />
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+  {/* Products */}
+  <div className="row">
+    {currentProducts.length > 0 ? (
+      currentProducts.map((product) => {
+        const discountedPrice =
+          product.price - (product.price * product.discount) / 100;
+        return (
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={product.id}>
+            <div
+              className="card h-100"
+              style={{
+                borderRadius: "12px",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+              }}
+            >
+              {product.discount > 0 && (
+                <span className="badge bg-danger position-absolute m-2">
+                  -{product.discount}%
+                </span>
+              )}
+              <img
+                src={product.image}
+                className="card-img-top"
+                alt={product.name}
+                style={{ height: "180px", objectFit: "contain" }}
+              />
+              <div className="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h6 className="card-title text-truncate">{product.name}</h6>
+                  <p
+                    className="text-muted mb-0"
                     style={{
-                      borderRadius: "30px 0 0 30px",
-                      backgroundColor: "#fff",
-                      borderRight: "none",
-                      padding: "12px 18px",
-                      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                      display: "-webkit-box",
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
                     }}
                   >
-                    <i className="bi bi-search fs-5"></i>
-                  </span>
+                    {product.shop}
+                  </p>
 
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Search products..."
-                    value={search}
-                    onChange={(e) => {
-                      setSearch(e.target.value);
-                      setCurrentPage(1);
-                    }}
-                    style={{
-                      borderRadius: "0 30px 30px 0",
-                      padding: "12px 10px",
-                      fontSize: "1rem",
-                      boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-                    }}
-                  />
+                  {/* ⭐ Rating */}
+                  <div>
+                    {[...Array(5)].map((_, i) => (
+                      <i
+                        key={i}
+                        className={`bi ${
+                          i < product.rating
+                            ? "bi-star-fill text-warning"
+                            : "bi-star text-muted"
+                        }`}
+                      ></i>
+                    ))}
+                  </div>
+
+                  {/* 💲 Price */}
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h5 className="text-primary mb-0">
+                      Rs.{discountedPrice.toFixed()}
+                    </h5>
+                    {product.discount > 0 && (
+                      <p className="text-decoration-line-through mb-0 text-muted">
+                        Rs.{product.price}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="d-flex justify-content-between align-items-center mt-3">
+                  <span
+                    className={`badge ${product.stock ? "bg-success" : "bg-danger"}`}
+                  >
+                    {product.stock ? "In Stock" : "Out of Stock"}
+                  </span>
+                  <Link
+                    to={`/checkout/${product.name.replace(/\s+/g, "-").toLowerCase()}`}
+                    state={{ product }}
+                  >
+                    <button
+                      className="btn btn-dark btn-sm fw-bold"
+                      disabled={!product.stock}
+                    >
+                      Order Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
+          </div>
+        );
+      })
+    ) : (
+      <p className="text-center">No products found.</p>
+    )}
+  </div>
 
-            <select
-              className="form-select w-auto mt-2 mt-md-0"
-              value={sort}
-              onChange={(e) => {
-                setSort(e.target.value);
-                setCurrentPage(1);
-              }}
+  {/* Pagination */}
+  {totalPages > 1 && (
+    <nav>
+      <ul className="pagination justify-content-center flex-wrap">
+        <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+          <button
+            className="page-link"
+            onClick={() => setCurrentPage(currentPage - 1)}
+          >
+            Previous
+          </button>
+        </li>
+        {[...Array(totalPages)].map((_, index) => (
+          <li
+            key={index}
+            className={`page-item ${currentPage === index + 1 ? "active" : ""}`}
+          >
+            <button
+              className="page-link"
+              onClick={() => setCurrentPage(index + 1)}
             >
-              <option value="relevance">Relevance</option>
-              <option value="priceLowHigh">Price: Low to High</option>
-              <option value="priceHighLow">Price: High to Low</option>
-            </select>
-          </div>
+              {index + 1}
+            </button>
+          </li>
+        ))}
+        <li
+          className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}
+        >
+          <button
+            className="page-link"
+            onClick={() => setCurrentPage(currentPage + 1)}
+          >
+            Next
+          </button>
+        </li>
+      </ul>
+    </nav>
+  )}
+</div>
 
-          {/* Products */}
-          <div className="row">
-            {currentProducts.length > 0 ? (
-              currentProducts.map((product) => {
-                const discountedPrice =
-                  product.price - (product.price * product.discount) / 100;
-                return (
-                  <div className="col-6 col-md-3 mb-4" key={product.id}>
-                    <div
-                      className="card h-100"
-                      style={{
-                        height: "400px",
-                        borderRadius: "12px",
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                      }}
-                    >
-                      {product.discount > 0 && (
-                        <span className="badge bg-danger position-absolute m-2">
-                          -{product.discount}%
-                        </span>
-                      )}
-                      <img
-                        src={product.image}
-                        className="card-img-top"
-                        alt={product.name}
-                        style={{ height: "200px", objectFit: "contain" }}
-                      />
-                      <div className="card-body d-flex flex-column justify-content-between">
-                        <div>
-                          <h6 className="card-title text-truncate">
-                            {product.name}
-                          </h6>
-                          <p
-                            className="text-muted mb-0"
-                            style={{
-                              display: "-webkit-box",
-                              WebkitLineClamp: 2,
-                              WebkitBoxOrient: "vertical",
-                              overflow: "hidden",
-                              textOverflow: "ellipsis",
-                            }}
-                          >
-                            {product.shop}
-                          </p>
-
-                          {/* ⭐ Rating */}
-                          <div>
-                            {[...Array(5)].map((_, i) => (
-                              <i
-                                key={i}
-                                className={`bi ${i < product.rating
-                                    ? "bi-star-fill text-warning"
-                                    : "bi-star text-muted"
-                                  }`}
-                              ></i>
-                            ))}
-                          </div>
-                          {/* 💲 Price */}
-                          <div className="d-flex justify-content-between align-items-center">
-                            <h5 className="text-primary mb-0">
-                              Rs.{discountedPrice.toFixed()}
-                            </h5>
-                            {product.discount > 0 && (
-                              <p className="text-decoration-line-through mb-0 text-muted">
-                                Rs.{product.price}
-                              </p>
-                            )}
-                          </div>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mt-3">
-                          <span
-                            className={`badge ${product.stock ? "bg-success" : "bg-danger"
-                              }`}
-                          >
-                            {product.stock ? "In Stock" : "Out of Stock"}
-                          </span>
-                          <Link
-                            to={`/checkout/${product.name
-                              .replace(/\s+/g, "-")
-                              .toLowerCase()}`}
-                            state={{ product }}
-                          >
-                            <button
-                              className="btn btn-dark btn-sm fw-bold"
-                              disabled={!product.stock}
-                            >
-                              Order Now
-                            </button>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })
-            ) : (
-              <p className="text-center">No products found.</p>
-            )}
-          </div>
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <nav>
-              <ul className="pagination justify-content-center">
-                <li
-                  className={`page-item ${currentPage === 1 ? "disabled" : ""
-                    }`}
-                >
-                  <button
-                    className="page-link"
-                    onClick={() => setCurrentPage(currentPage - 1)}
-                  >
-                    Previous
-                  </button>
-                </li>
-                {[...Array(totalPages)].map((_, index) => (
-                  <li
-                    key={index}
-                    className={`page-item ${currentPage === index + 1 ? "active" : ""
-                      }`}
-                  >
-                    <button
-                      className="page-link"
-                      onClick={() => setCurrentPage(index + 1)}
-                    >
-                      {index + 1}
-                    </button>
-                  </li>
-                ))}
-                <li
-                  className={`page-item ${currentPage === totalPages ? "disabled" : ""
-                    }`}
-                >
-                  <button
-                    className="page-link"
-                    onClick={() => setCurrentPage(currentPage + 1)}
-                  >
-                    Next
-                  </button>
-                </li>
-              </ul>
-            </nav>
-          )}
-        </div>
       </div>
     </div>
   );

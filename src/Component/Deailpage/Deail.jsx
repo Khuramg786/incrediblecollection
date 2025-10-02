@@ -29,14 +29,14 @@ const Deail = () => {
     },
     {
       id: 3,
-      title: "Full Makeup Kit with Applicator",
+      title: "Promotional Gifts Printing Services",
       oldPrice: 200,
       newPrice: 0.0,
-      discount: "-$6.00",
+      discount: "-6.0%",
       rating: 5,
       stock: 124,
       image:
-        "https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Full%20makeup%20kit.jpg?updatedAt=1758751533091",
+        "https://5.imimg.com/data5/SELLER/Default/2024/1/375860249/UZ/QY/BE/118563100/promotional-gifts-printing-services.jpg",
       button: "ADD TO CART",
     },
   ];
@@ -123,9 +123,9 @@ const Deail = () => {
                   </div>
 
                   <p className="mb-1">
-                    <del className="text-muted">${product.oldPrice}</del>{" "}
+                    <del className="text-muted">{product.oldPrice}</del>{" "}
                     <span className="text-primary fw-bold">
-                      ${product.newPrice}
+                      Rs.{product.newPrice}
                     </span>
                   </p>
 

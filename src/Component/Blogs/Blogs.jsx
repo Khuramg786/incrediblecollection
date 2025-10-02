@@ -4,69 +4,68 @@ const Blog = () => {
   return (
     <div className="container my-5">
       {/* Main Heading */}
-      <h1 className="text-center fw-bold mb-4">E-commerce Insights & Trends</h1>
+      <h1 className="text-center fw-bold mb-4">
+        Customized Printing Products Insights & Trends
+      </h1>
 
-   {/* Intro Paragraph */}
-<p className="text-muted text-center fs-5 w-75 mx-auto">
-Welcome to <strong>InkcredibleCollection.store</strong> Blog! Our blog is
-committed to providing you with the most up-to-date information on popular products,
-innovative concepts, and customer favorites. From special printing products to
-luxury collectibles and everyday beauty staples, we discover how
-e-commerce is redefining the shopping experience. Keep watching for
-inspiration, guidance, and product news that are most important to you.
-</p>
+      {/* Intro Paragraph */}
+      <p className="text-muted text-center fs-5 w-75 mx-auto">
+        Welcome to <strong>InkcredibleCollection.store</strong> Blog! Our blog is
+        dedicated to sharing the latest updates, creative ideas, and trends in{" "}
+        <strong>customized printing products</strong>. From personalized gifts
+        to branded merchandise, discover how unique printing solutions are
+        changing the way people celebrate, promote, and express themselves.
+      </p>
 
+      {/* Section 1 */}
+      <div className="my-2">
+        <h2 className="fw-bold">Personalized Gifts: Memorable & Unique</h2>
+        <p className="text-muted">
+          Customized printing has made gift-giving more meaningful than ever.
+          Products like printed mugs, cushions, photo frames, and t-shirts allow
+          people to create one-of-a-kind presents that capture emotions,
+          memories, and personal style. At{" "}
+          <strong>InkcredibleCollection.store</strong>, we help you turn simple
+          items into cherished keepsakes that leave a lasting impression.
+        </p>
+      </div>
 
+      {/* Section 2 */}
+      <div className="my-2">
+        <h2 className="fw-bold">Branding with Customized Printing</h2>
+        <p className="text-muted">
+          Businesses today use customized printing products like stationery,
+          corporate gifts, uniforms, and promotional items to strengthen their
+          brand identity. These personalized solutions not only boost visibility
+          but also create a professional image. With premium printing quality
+          and innovative designs, companies can showcase their brand in a unique
+          and memorable way.
+        </p>
+      </div>
 
-   {/* Second Section */}
-<div className="my-2">
-  <h2 className="fw-bold">Die-Cast Cars: Collectibles & Creativity</h2>
-  <p className="text-muted">
-    Die-cast cars are not just small copies — they're gems
-    that bring back memories and emotion. From copies of high-end automobiles to classic vintage cars,
-    these products attract hobbyists as well as collectors. With
-    <strong>InkcredibleCollection.store</strong>, we present collectors with
-    rare and difficult-to-find die-cast cars collected from all over the world. This
-category continues to be healthy as collectors look for unique, high-definition models
-to share with their collections or gift to someone else. They are more than toys,
-they are a representation of artisanship, history, and creativity that connect people
-across the generations.
-  </p>
-</div>
+      {/* Section 3 */}
+      <div className="my-2">
+        <h2 className="fw-bold">Wooden & Premium Customized Items</h2>
+        <p className="text-muted">
+          Beyond paper and fabric, customized printing now extends to wooden and
+          premium products. From engraved wooden plaques to custom-printed
+          organizers and décor items, these products blend durability with
+          creativity. Perfect for gifting, events, or personal collections, they
+          add elegance and uniqueness that stands out from regular prints.
+        </p>
+      </div>
 
-
-
-{/* Third Section */}
-<div className="my-2">
-  <h2 className="fw-bold">Beauty Brushes: A Daily Essential</h2>
-  <p className="text-muted">
-  Beauty brushes are now a staple for all beauty lovers, professional or amateur. With the increasing demand for quality tools, manufacturers pay more heed to precision, longevity, and silky smooth application that takes the makeup experience to even greater levels. From foundation brushes to eye shadow palettes and contour kits, options are endless and continue
-continuing to evolve. Consumers on <strong>InkcredibleCollection.store</strong> can browse
-through a vast array of beauty brushes designed to suit every kind of style, skin
-type, and price range. More than just instruments, the brushes have developed into
-essentials when building confidence and obtaining ideal day-long looks.
-  </p>
-</div>
-
-
-
-   {/* Third Section */}
-<div className="my-2">
-  <h2 className="fw-bold">Beauty Brushes: A Daily Essential</h2>
-  <p className="text-muted">
-  Beauty brushes are now essentials for all makeup enthusiasts, from newbies to
-    professionals. With increasing demand for great quality tools, companies now
-    emphasize precision, longevity, and smooth application that adds up to
-    the overall makeup experience. From foundation brushes to eye shadow sets
-    and contour kits, the options are limitless and ever-changing
-growing. At <strong>InkcredibleCollection.store</strong>, consumers can easily
-    compare, browse, and buy premium quality brushes that match their
-    style, skin type, and budget. More than just tools, the brushes are now
-    essentials in building self-confidence and quick daily makeups.
-  </p>
-</div>
-
-
+      {/* Section 4 */}
+      <div className="my-2">
+        <h2 className="fw-bold">Everyday Lifestyle Products</h2>
+        <p className="text-muted">
+          Customized printing is not limited to gifts or business use. Items
+          like printed phone cases, water bottles, tote bags, and stationery
+          have become everyday essentials with a personal touch. They allow
+          individuals to showcase their style, while also making practical items
+          more enjoyable and unique.
+        </p>
+      </div>
 
       {/* Blog Cards */}
       <div className="row mt-5">
@@ -80,19 +79,19 @@ growing. At <strong>InkcredibleCollection.store</strong>, consumers can easily
             }}
           >
             <img
-              src="https://ik.imagekit.io/jkths6fjn/Hcff4f47d223b4675b57c54287a30fc2cj.avif?updatedAt=1758755810491"
+              src="https://ik.imagekit.io/b6iqka2sz/inkcrediblecollection-White%20Coffee%20Mug.jpg?updatedAt=1759433447006"
               className="card-img-top"
-              alt="Printing Products"
+              alt="Custom Mugs"
               style={{
                 borderTopLeftRadius: "15px",
                 borderTopRightRadius: "15px",
               }}
             />
             <div className="card-body">
-              <h5 className="card-title fw-bold">Creative Printing</h5>
+              <h5 className="card-title fw-bold">Personalized Mugs</h5>
               <p className="card-text">
-                Discover how personalized printing items like mugs, t-shirts,
-                and cases are revolutionizing gifting and branding.
+                Coffee tastes better in a mug designed just for you! Perfect for
+                gifts, branding, or personal use.
               </p>
             </div>
           </div>
@@ -108,19 +107,19 @@ growing. At <strong>InkcredibleCollection.store</strong>, consumers can easily
             }}
           >
             <img
-              src="https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Die%20Cast%20car.jpg?updatedAt=1758756027139"
+              src="https://ik.imagekit.io/b6iqka2sz/inkcrediblecollection-Custom%20T-shirts.jpg?updatedAt=1759433670439"
               className="card-img-top"
-              alt="Die-Cost Cars"
+              alt="Custom T-Shirts"
               style={{
                 borderTopLeftRadius: "15px",
                 borderTopRightRadius: "15px",
               }}
             />
             <div className="card-body">
-              <h5 className="card-title fw-bold">Die-Cost Car Models</h5>
+              <h5 className="card-title fw-bold">Custom T-Shirts</h5>
               <p className="card-text">
-                Explore the world of collectible die-cost cars loved by
-                enthusiasts for their detail, design, and nostalgic value.
+                Wear your personality with stylish, printed t-shirts designed
+                with your choice of graphics, text, or logos.
               </p>
             </div>
           </div>
@@ -136,19 +135,19 @@ growing. At <strong>InkcredibleCollection.store</strong>, consumers can easily
             }}
           >
             <img
-              src="https://ik.imagekit.io/jkths6fjn/inkcrediblecollection-Makeup%20Brushes.jpg?updatedAt=1758756162729"
+              src="https://ik.imagekit.io/b6iqka2sz/inkcrediblecollection-Engraved%20Wooden%20cards.png?updatedAt=1759433840671"
               className="card-img-top"
-              alt="Beauty Brush"
+              alt="Wooden Engraving"
               style={{
                 borderTopLeftRadius: "15px",
                 borderTopRightRadius: "15px",
               }}
             />
             <div className="card-body">
-              <h5 className="card-title fw-bold">Beauty Brush Essentials</h5>
+              <h5 className="card-title fw-bold">Wooden Engravings</h5>
               <p className="card-text">
-                Learn why professional-quality beauty brushes are a must-have
-                in modern makeup routines for flawless results.
+                Add a touch of elegance with engraved wooden products — perfect
+                for gifts, décor, or personal keepsakes.
               </p>
             </div>
           </div>
